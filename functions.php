@@ -19,7 +19,8 @@ $wtvglobal_includes = array(
     '/class-wp-bootstrap-navwalker.php', // Load custom WordPress nav walker.
     '/editor.php', // Load Editor functions.
     '/widgets.php',
-    '/woocommerce.php'
+    '/disable-comments.php',
+    '/cpt.php'
 );
 
 foreach ($wtvglobal_includes as $file) {
