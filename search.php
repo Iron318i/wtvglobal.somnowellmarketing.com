@@ -19,7 +19,7 @@ get_header();
 	    <?php
 	    printf(
 		    /* translators: %s: query term */
-		    esc_html__('Search Results for: %s', 'vitacodis'), '<span>' . get_search_query() . '</span>'
+		    esc_html__('Search Results for: %s', 'wtvglobal'), '<span>' . get_search_query() . '</span>'
 	    );
 	    ?>
         </h3>
@@ -46,7 +46,7 @@ get_header();
     <?php endif; ?>
 
     <!-- The pagination component -->
-    <?php vitacodis_pagination(); ?>
+    <?php wtvglobal_pagination(); ?>
 
 </div>
 <?php

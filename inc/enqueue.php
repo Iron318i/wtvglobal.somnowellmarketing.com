@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Vitacodis-theme enqueue scripts
+ * wtvglobal-theme enqueue scripts
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-if (!function_exists('vitacodis_scripts')) {
+if (!function_exists('wtvglobal_scripts')) {
 
     /**
      * Load theme's JavaScript and CSS sources.
      */
-    function vitacodis_scripts() {
+    function wtvglobal_scripts() {
 	// Get the theme data.
 	wp_enqueue_style('fonts-styles', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap', [], null);
 	$the_theme = wp_get_theme();
@@ -25,12 +25,12 @@ if (!function_exists('vitacodis_scripts')) {
 	$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/js/theme.js');
 	wp_enqueue_script('jquery');
 
-	wp_enqueue_script('vitacodis-scripts', get_template_directory_uri() . '/js/theme.js', array(), $js_version, true);
+	wp_enqueue_script('wtvglobal-scripts', get_template_directory_uri() . '/js/theme.js', array(), $js_version, true);
     }
 
-} // End of if function_exists( 'vitacodis_scripts' ).
+} // End of if function_exists( 'wtvglobal_scripts' ).
 
-add_action('wp_enqueue_scripts', 'vitacodis_scripts');
+add_action('wp_enqueue_scripts', 'wtvglobal_scripts');
 
 add_action('wp_print_styles', 'deregister_styles', 100);
 

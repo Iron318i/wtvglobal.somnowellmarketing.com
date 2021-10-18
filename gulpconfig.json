@@ -1,6 +1,6 @@
 {
     "browserSyncOptions": {
-	"proxy": "http://newvitacodis.gip.by/",
+	"proxy": "http://newwtvglobal.gip.by/",
 	"notify": false,
 	"files": [
 	    "./css/*.min.css",
@@ -18,7 +18,7 @@
 	"node": "./node_modules",
 	"composer": "./vendor",
 	"dev": "./src",
-	"dist": "./dist/vitacodis",
-	"distprod": "./dist-product/vitacodis"
+	"dist": "./dist/wtvglobal",
+	"distprod": "./dist-product/wtvglobal"
     }
 }

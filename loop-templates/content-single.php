@@ -2,7 +2,7 @@
 /**
  * Single post partial template
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
@@ -11,7 +11,7 @@ defined('ABSPATH') || exit;
     <header class="entry-header mb-2">
 	<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 	<div class="entry-meta">
-	    <?php vitacodis_posted_on(); ?>
+	    <?php wtvglobal_posted_on(); ?>
 	</div><!-- .entry-meta -->
     </header><!-- .entry-header -->
     <div class="entry-content mt-2">
@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 	<?php
 	wp_link_pages(
 		array(
-		    'before' => '<div class="page-links">' . __('Pages:', 'vitacodis'),
+		    'before' => '<div class="page-links">' . __('Pages:', 'wtvglobal'),
 		    'after' => '</div>',
 		)
 	);

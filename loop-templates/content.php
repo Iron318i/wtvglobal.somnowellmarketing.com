@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;

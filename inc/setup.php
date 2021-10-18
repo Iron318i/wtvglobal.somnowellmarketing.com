@@ -3,14 +3,14 @@
 /**
  * Theme basic setup
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-add_action('after_setup_theme', 'vitacodis_setup');
+add_action('after_setup_theme', 'wtvglobal_setup');
 
-if (!function_exists('vitacodis_setup')) {
+if (!function_exists('wtvglobal_setup')) {
 
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -19,14 +19,14 @@ if (!function_exists('vitacodis_setup')) {
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function vitacodis_setup() {
+    function wtvglobal_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on vitacodis, use a find and replace
-	 * to change 'vitacodis' to the name of your theme in all the template files
+	 * If you're building a theme based on wtvglobal, use a find and replace
+	 * to change 'wtvglobal' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain('vitacodis', get_template_directory() . '/languages');
+	load_theme_textdomain('wtvglobal', get_template_directory() . '/languages');
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
@@ -42,8 +42,8 @@ if (!function_exists('vitacodis_setup')) {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-		    'primary' => __('Primary Menu', 'vitacodis'),
-		    'terms' => __('Terms Menu', 'vitacodis')
+		    'primary' => __('Primary Menu', 'wtvglobal'),
+		    'terms' => __('Terms Menu', 'wtvglobal')
 		)
 	);
 
@@ -78,15 +78,15 @@ if (!function_exists('vitacodis_setup')) {
 	add_theme_support('responsive-embeds');
 
 	// Check and setup theme default settings.
-	vitacodis_setup_theme_default_settings();
+	wtvglobal_setup_theme_default_settings();
     }
 
 }
 
 
-add_filter('excerpt_more', 'vitacodis_custom_excerpt_more');
+add_filter('excerpt_more', 'wtvglobal_custom_excerpt_more');
 
-if (!function_exists('vitacodis_custom_excerpt_more')) {
+if (!function_exists('wtvglobal_custom_excerpt_more')) {
 
     /**
      * Removes the ... from the excerpt read more link
@@ -95,7 +95,7 @@ if (!function_exists('vitacodis_custom_excerpt_more')) {
      *
      * @return string
      */
-    function vitacodis_custom_excerpt_more($more) {
+    function wtvglobal_custom_excerpt_more($more) {
 	if (!is_admin()) {
 	    $more = '...';
 	}
@@ -104,9 +104,9 @@ if (!function_exists('vitacodis_custom_excerpt_more')) {
 
 }
 
-//add_filter('wp_trim_excerpt', 'vitacodis_all_excerpts_get_more_link');
+//add_filter('wp_trim_excerpt', 'wtvglobal_all_excerpts_get_more_link');
 
-if (!function_exists('vitacodis_all_excerpts_get_more_link')) {
+if (!function_exists('wtvglobal_all_excerpts_get_more_link')) {
 
     /**
      * Adds a custom read more link to all excerpts, manually or automatically generated
@@ -115,9 +115,9 @@ if (!function_exists('vitacodis_all_excerpts_get_more_link')) {
      *
      * @return string
      */
-    function vitacodis_all_excerpts_get_more_link($post_excerpt) {
+    function wtvglobal_all_excerpts_get_more_link($post_excerpt) {
 	if (!is_admin()) {
-	    $post_excerpt = $post_excerpt . '<p><a class="btn btn-sm btn-primary" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __('Read More...', 'vitacodis') . '</a></p>';
+	    $post_excerpt = $post_excerpt . '<p><a class="btn btn-sm btn-primary" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __('Read More...', 'wtvglobal') . '</a></p>';
 	}
 	return $post_excerpt;
     }

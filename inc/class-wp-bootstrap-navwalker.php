@@ -23,14 +23,14 @@ defined('ABSPATH') || exit;
  */
 
 /* Check if Class Exists. */
-if (!class_exists('vitacodis_WP_Bootstrap_Navwalker')) {
+if (!class_exists('wtvglobal_WP_Bootstrap_Navwalker')) {
 
     /**
      * WP_Bootstrap_Navwalker class.
      *
      * @extends Walker_Nav_Menu
      */
-    class vitacodis_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+    class wtvglobal_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 	/**
 	 * Starts the list before the elements are added.
@@ -183,7 +183,7 @@ if (!class_exists('vitacodis_WP_Bootstrap_Navwalker')) {
 	    }
 
 	    $atts['target'] = !empty($item->target) ? $item->target : '';
-	    if ('_blank' === $item->target && empty($item->xfn)) { // Thanks to LukaszJaro, see https://github.com/vitacodis/vitacodis/issues/973.
+	    if ('_blank' === $item->target && empty($item->xfn)) { // Thanks to LukaszJaro, see https://github.com/wtvglobal/wtvglobal/issues/973.
 		$atts['rel'] = 'noopener noreferrer';
 	    } else {
 		$atts['rel'] = $item->xfn;
@@ -381,7 +381,7 @@ if (!class_exists('vitacodis_WP_Bootstrap_Navwalker')) {
 		    $fallback_output .= ' class="' . esc_attr($menu_class) . '"';
 		}
 		$fallback_output .= '>';
-		$fallback_output .= '<li><a href="' . esc_url(admin_url('nav-menus.php')) . '" title="' . esc_attr__('Add a menu', 'vitacodis') . '">' . esc_html__('Add a menu', 'vitacodis') . '</a></li>';
+		$fallback_output .= '<li><a href="' . esc_url(admin_url('nav-menus.php')) . '" title="' . esc_attr__('Add a menu', 'wtvglobal') . '">' . esc_html__('Add a menu', 'wtvglobal') . '</a></li>';
 		$fallback_output .= '</ul>';
 		if ($container) {
 		    $fallback_output .= '</' . esc_attr($container) . '>';

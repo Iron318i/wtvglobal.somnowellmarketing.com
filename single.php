@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;

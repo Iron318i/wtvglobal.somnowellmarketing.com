@@ -5,17 +5,17 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-if (!function_exists('vitacodis_posted_on')) {
+if (!function_exists('wtvglobal_posted_on')) {
 
     /**
      * Prints HTML with meta information for the current post-date/time and author.
      */
-    function vitacodis_posted_on() {
+    function wtvglobal_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if (get_the_time('U') !== get_the_modified_time('U')) {
 	    $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -24,13 +24,13 @@ if (!function_exists('vitacodis_posted_on')) {
 		$time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
 	);
 	$posted_on = apply_filters(
-		'vitacodis_posted_on', sprintf(
-			'<span class="posted-on">%1$s</span>', apply_filters('vitacodis_posted_on_time', $time_string)
+		'wtvglobal_posted_on', sprintf(
+			'<span class="posted-on">%1$s</span>', apply_filters('wtvglobal_posted_on_time', $time_string)
 		)
 	);
 	$byline = apply_filters(
-		'vitacodis_posted_by', sprintf(
-			'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>', $posted_on ? esc_html_x('by', 'post author', 'vitacodis') : esc_html_x('Posted by', 'post author', 'vitacodis'), esc_url(get_author_posts_url(get_the_author_meta('ID'))), esc_html(get_the_author())
+		'wtvglobal_posted_by', sprintf(
+			'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>', $posted_on ? esc_html_x('by', 'post author', 'wtvglobal') : esc_html_x('Posted by', 'post author', 'wtvglobal'), esc_url(get_author_posts_url(get_the_author_meta('ID'))), esc_html(get_the_author())
 		)
 	);
 	echo $posted_on . $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -38,51 +38,51 @@ if (!function_exists('vitacodis_posted_on')) {
 
 }
 
-if (!function_exists('vitacodis_entry_footer')) {
+if (!function_exists('wtvglobal_entry_footer')) {
 
     /**
      * Prints HTML with meta information for the categories, tags and comments.
      */
-    function vitacodis_entry_footer() {
+    function wtvglobal_entry_footer() {
 	// Hide category and tag text for pages.
 	if ('post' === get_post_type()) {
 	    /* translators: used between list items, there is a space after the comma */
-	    $categories_list = get_the_category_list(esc_html__(', ', 'vitacodis'));
-	    if ($categories_list && vitacodis_categorized_blog()) {
+	    $categories_list = get_the_category_list(esc_html__(', ', 'wtvglobal'));
+	    if ($categories_list && wtvglobal_categorized_blog()) {
 		/* translators: %s: Categories of current post */
-		printf('<span class="cat-links">' . esc_html__('Posted in %s', 'vitacodis') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf('<span class="cat-links">' . esc_html__('Posted in %s', 'wtvglobal') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	    }
 	    /* translators: used between list items, there is a space after the comma */
-	    $tags_list = get_the_tag_list('', esc_html__(', ', 'vitacodis'));
+	    $tags_list = get_the_tag_list('', esc_html__(', ', 'wtvglobal'));
 	    if ($tags_list) {
 		/* translators: %s: Tags of current post */
-		printf('<span class="tags-links">' . esc_html__('Tagged %s', 'vitacodis') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf('<span class="tags-links">' . esc_html__('Tagged %s', 'wtvglobal') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	    }
 	}
 	if (!is_single() && !post_password_required() && ( comments_open() || get_comments_number() )) {
 	    echo '<span class="comments-link">';
-	    comments_popup_link(esc_html__('Leave a comment', 'vitacodis'), esc_html__('1 Comment', 'vitacodis'), esc_html__('% Comments', 'vitacodis'));
+	    comments_popup_link(esc_html__('Leave a comment', 'wtvglobal'), esc_html__('1 Comment', 'wtvglobal'), esc_html__('% Comments', 'wtvglobal'));
 	    echo '</span>';
 	}
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__('Edit %s', 'vitacodis'), the_title('<span class="sr-only">"', '"</span>', false)
+			esc_html__('Edit %s', 'wtvglobal'), the_title('<span class="sr-only">"', '"</span>', false)
 		), '<span class="edit-link">', '</span>'
 	);
     }
 
 }
 
-if (!function_exists('vitacodis_categorized_blog')) {
+if (!function_exists('wtvglobal_categorized_blog')) {
 
     /**
      * Returns true if a blog has more than 1 category.
      *
      * @return bool
      */
-    function vitacodis_categorized_blog() {
-	$all_the_cool_cats = get_transient('vitacodis_categories');
+    function wtvglobal_categorized_blog() {
+	$all_the_cool_cats = get_transient('wtvglobal_categories');
 	if (false === $all_the_cool_cats) {
 	    // Create an array of all the categories that are attached to posts.
 	    $all_the_cool_cats = get_categories(
@@ -95,49 +95,49 @@ if (!function_exists('vitacodis_categorized_blog')) {
 	    );
 	    // Count the number of categories that are attached to the posts.
 	    $all_the_cool_cats = count($all_the_cool_cats);
-	    set_transient('vitacodis_categories', $all_the_cool_cats);
+	    set_transient('wtvglobal_categories', $all_the_cool_cats);
 	}
 	if ($all_the_cool_cats > 1) {
-	    // This blog has more than 1 category so vitacodis_categorized_blog should return true.
+	    // This blog has more than 1 category so wtvglobal_categorized_blog should return true.
 	    return true;
 	} else {
-	    // This blog has only 1 category so vitacodis_categorized_blog should return false.
+	    // This blog has only 1 category so wtvglobal_categorized_blog should return false.
 	    return false;
 	}
     }
 
 }
 
-add_action('edit_category', 'vitacodis_category_transient_flusher');
-add_action('save_post', 'vitacodis_category_transient_flusher');
+add_action('edit_category', 'wtvglobal_category_transient_flusher');
+add_action('save_post', 'wtvglobal_category_transient_flusher');
 
-if (!function_exists('vitacodis_category_transient_flusher')) {
+if (!function_exists('wtvglobal_category_transient_flusher')) {
 
     /**
-     * Flush out the transients used in vitacodis_categorized_blog.
+     * Flush out the transients used in wtvglobal_categorized_blog.
      */
-    function vitacodis_category_transient_flusher() {
+    function wtvglobal_category_transient_flusher() {
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
 	    return;
 	}
 	// Like, beat it. Dig?
-	delete_transient('vitacodis_categories');
+	delete_transient('wtvglobal_categories');
     }
 
 }
 
-if (!function_exists('vitacodis_body_attributes')) {
+if (!function_exists('wtvglobal_body_attributes')) {
 
     /**
      * Displays the attributes for the body element.
      */
-    function vitacodis_body_attributes() {
+    function wtvglobal_body_attributes() {
 	/**
 	 * Filters the body attributes.
 	 *
 	 * @param array $atts An associative array of attributes.
 	 */
-	$atts = array_unique(apply_filters('vitacodis_body_attributes', $atts = array()));
+	$atts = array_unique(apply_filters('wtvglobal_body_attributes', $atts = array()));
 	if (!is_array($atts) || empty($atts)) {
 	    return;
 	}

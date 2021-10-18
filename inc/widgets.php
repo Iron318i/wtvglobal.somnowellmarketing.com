@@ -3,22 +3,22 @@
 /**
  * Declaring widgets
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-add_action('widgets_init', 'vitacodis_widgets_init');
+add_action('widgets_init', 'wtvglobal_widgets_init');
 
-if (!function_exists('vitacodis_widgets_init')) {
+if (!function_exists('wtvglobal_widgets_init')) {
 
     /**
      * Initializes themes widgets.
      */
-    function vitacodis_widgets_init() {
+    function wtvglobal_widgets_init() {
 	register_sidebar(
 		array(
-		    'name' => __('Footer', 'vitacodis'),
+		    'name' => __('Footer', 'wtvglobal'),
 		    'id' => 'footer',
 		    'before_widget' => '<div class="widget">',
 		    'after_widget' => '</div>',
@@ -38,4 +38,4 @@ if (!function_exists('vitacodis_widgets_init')) {
 	);
     }
 
-} // End of function_exists( 'vitacodis_widgets_init' ).
+} // End of function_exists( 'wtvglobal_widgets_init' ).

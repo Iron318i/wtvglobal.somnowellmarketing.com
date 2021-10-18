@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
@@ -16,8 +16,8 @@ get_header();
 </div>
 <div class="container py-3" id="content" tabindex="-1">
     <section class="error-404 not-found py-5">
-	<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'vitacodis'); ?></h1>
-	<p><?php esc_html_e('It looks like nothing was found at this location. ', 'vitacodis'); ?></p>
+	<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'wtvglobal'); ?></h1>
+	<p><?php esc_html_e('It looks like nothing was found at this location. ', 'wtvglobal'); ?></p>
     </section><!-- .error-404 -->
 </div><!-- #content -->
 <?php

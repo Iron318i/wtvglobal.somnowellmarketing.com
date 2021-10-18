@@ -2,7 +2,7 @@
 /**
  * Content empty partial template
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 
 // Exit if accessed directly.

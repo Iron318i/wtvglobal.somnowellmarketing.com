@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-add_filter('body_class', 'vitacodis_body_classes');
+add_filter('body_class', 'wtvglobal_body_classes');
 
-if (!function_exists('vitacodis_body_classes')) {
+if (!function_exists('wtvglobal_body_classes')) {
 
     /**
      * Adds custom classes to the array of body classes.
@@ -20,7 +20,7 @@ if (!function_exists('vitacodis_body_classes')) {
      *
      * @return array
      */
-    function vitacodis_body_classes($classes) {
+    function wtvglobal_body_classes($classes) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if (is_multi_author()) {
 	    $classes[] = 'group-blog';
@@ -36,9 +36,9 @@ if (!function_exists('vitacodis_body_classes')) {
 }
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
-add_filter('body_class', 'vitacodis_adjust_body_class');
+add_filter('body_class', 'wtvglobal_adjust_body_class');
 
-if (!function_exists('vitacodis_adjust_body_class')) {
+if (!function_exists('wtvglobal_adjust_body_class')) {
 
     /**
      * Setup body classes.
@@ -47,7 +47,7 @@ if (!function_exists('vitacodis_adjust_body_class')) {
      *
      * @return mixed
      */
-    function vitacodis_adjust_body_class($classes) {
+    function wtvglobal_adjust_body_class($classes) {
 
 	foreach ($classes as $key => $value) {
 	    if ('tag' === $value) {
@@ -60,12 +60,12 @@ if (!function_exists('vitacodis_adjust_body_class')) {
 
 }
 
-if (!function_exists('vitacodis_post_nav')) {
+if (!function_exists('wtvglobal_post_nav')) {
 
     /**
      * Display navigation to next/previous post when applicable.
      */
-    function vitacodis_post_nav() {
+    function wtvglobal_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
 	$next = get_adjacent_post(false, '', false);
@@ -75,14 +75,14 @@ if (!function_exists('vitacodis_post_nav')) {
 	}
 	?>
 	<nav class="container navigation post-navigation">
-	    <h2 class="sr-only"><?php esc_html_e('Post navigation', 'vitacodis'); ?></h2>
+	    <h2 class="sr-only"><?php esc_html_e('Post navigation', 'wtvglobal'); ?></h2>
 	    <div class="row nav-links justify-content-between">
 		<?php
 		if (get_previous_post_link()) {
-		    previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'vitacodis'));
+		    previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'wtvglobal'));
 		}
 		if (get_next_post_link()) {
-		    next_post_link('<span class="nav-next">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'vitacodis'));
+		    next_post_link('<span class="nav-next">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'wtvglobal'));
 		}
 		?>
 	    </div><!-- .nav-links -->
@@ -92,35 +92,35 @@ if (!function_exists('vitacodis_post_nav')) {
 
 }
 
-if (!function_exists('vitacodis_pingback')) {
+if (!function_exists('wtvglobal_pingback')) {
 
     /**
      * Add a pingback url auto-discovery header for single posts of any post type.
      */
-    function vitacodis_pingback() {
+    function wtvglobal_pingback() {
 	if (is_singular() && pings_open()) {
 	    echo '<link rel="pingback" href="' . esc_url(get_bloginfo('pingback_url')) . '">' . "\n";
 	}
     }
 
 }
-add_action('wp_head', 'vitacodis_pingback');
+add_action('wp_head', 'wtvglobal_pingback');
 
-if (!function_exists('vitacodis_mobile_web_app_meta')) {
+if (!function_exists('wtvglobal_mobile_web_app_meta')) {
 
     /**
      * Add mobile-web-app meta.
      */
-    function vitacodis_mobile_web_app_meta() {
+    function wtvglobal_mobile_web_app_meta() {
 	echo '<meta name="mobile-web-app-capable" content="yes">' . "\n";
 	echo '<meta name="apple-mobile-web-app-capable" content="yes">' . "\n";
 	echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr(get_bloginfo('name')) . ' - ' . esc_attr(get_bloginfo('description')) . '">' . "\n";
     }
 
 }
-add_action('wp_head', 'vitacodis_mobile_web_app_meta');
+add_action('wp_head', 'wtvglobal_mobile_web_app_meta');
 
-if (!function_exists('vitacodis_default_body_attributes')) {
+if (!function_exists('wtvglobal_default_body_attributes')) {
 
     /**
      * Adds schema markup to the body element.
@@ -128,19 +128,19 @@ if (!function_exists('vitacodis_default_body_attributes')) {
      * @param array $atts An associative array of attributes.
      * @return array
      */
-    function vitacodis_default_body_attributes($atts) {
+    function wtvglobal_default_body_attributes($atts) {
 	$atts['itemscope'] = '';
 	$atts['itemtype'] = 'http://schema.org/WebSite';
 	return $atts;
     }
 
 }
-add_filter('vitacodis_body_attributes', 'vitacodis_default_body_attributes');
+add_filter('wtvglobal_body_attributes', 'wtvglobal_default_body_attributes');
 
 // Escapes all occurances of 'the_archive_description'.
-add_filter('get_the_archive_description', 'vitacodis_escape_the_archive_description');
+add_filter('get_the_archive_description', 'wtvglobal_escape_the_archive_description');
 
-if (!function_exists('vitacodis_escape_the_archive_description')) {
+if (!function_exists('wtvglobal_escape_the_archive_description')) {
 
     /**
      * Escapes the description for an author or post type archive.
@@ -148,7 +148,7 @@ if (!function_exists('vitacodis_escape_the_archive_description')) {
      * @param string $description Archive description.
      * @return string Maybe escaped $description.
      */
-    function vitacodis_escape_the_archive_description($description) {
+    function wtvglobal_escape_the_archive_description($description) {
 	if (is_author() || is_post_type_archive()) {
 	    return wp_kses_post($description);
 	} else {
@@ -160,14 +160,14 @@ if (!function_exists('vitacodis_escape_the_archive_description')) {
 	}
     }
 
-} // End of if function_exists( 'vitacodis_escape_the_archive_description' ).
+} // End of if function_exists( 'wtvglobal_escape_the_archive_description' ).
 // Escapes all occurances of 'the_title()' and 'get_the_title()'.
-add_filter('the_title', 'vitacodis_kses_title');
+add_filter('the_title', 'wtvglobal_kses_title');
 
 // Escapes all occurances of 'the_archive_title' and 'get_the_archive_title()'.
-add_filter('get_the_archive_title', 'vitacodis_kses_title');
+add_filter('get_the_archive_title', 'wtvglobal_kses_title');
 
-if (!function_exists('vitacodis_kses_title')) {
+if (!function_exists('wtvglobal_kses_title')) {
 
     /**
      * Sanitizes data for allowed HTML tags for post title.
@@ -175,7 +175,7 @@ if (!function_exists('vitacodis_kses_title')) {
      * @param string $data Post title to filter.
      * @return string Filtered post title with allowed HTML tags and attributes intact.
      */
-    function vitacodis_kses_title($data) {
+    function wtvglobal_kses_title($data) {
 	// Tags not supported in HTML5 are not allowed.
 	$allowed_tags = array(
 	    'abbr' => array(),
@@ -238,12 +238,12 @@ if (!function_exists('vitacodis_kses_title')) {
 	    'u' => array(),
 	    'var' => array(),
 	);
-	$allowed_tags = apply_filters('vitacodis_kses_title', $allowed_tags);
+	$allowed_tags = apply_filters('wtvglobal_kses_title', $allowed_tags);
 
 	return wp_kses($data, $allowed_tags);
     }
 
-} // End of if function_exists( 'vitacodis_kses_title' ).
+} // End of if function_exists( 'wtvglobal_kses_title' ).
 
 if (!function_exists('load_custom_wp_admin_style')) {
 

@@ -2,7 +2,7 @@
 /**
  * Svg Sprite
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 ?>

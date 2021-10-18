@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Vitacodis-theme functions and definitions
+ * wtvglobal-theme functions and definitions
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-$vitacodis_includes = array(
+$wtvglobal_includes = array(
     '/theme-settings.php', // Initialize theme default settings.
     '/setup.php', // Theme setup and custom theme supports.
     '/enqueue.php', // Enqueue scripts and styles.
@@ -22,6 +22,6 @@ $vitacodis_includes = array(
     '/woocommerce.php'
 );
 
-foreach ($vitacodis_includes as $file) {
+foreach ($wtvglobal_includes as $file) {
     require_once get_template_directory() . '/inc' . $file;
 }

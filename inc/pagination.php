@@ -2,12 +2,12 @@
 /**
  * Pagination layout
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-if (!function_exists('vitacodis_pagination')) {
+if (!function_exists('wtvglobal_pagination')) {
 
     /**
      * Displays the navigation to next/previous set of posts.
@@ -39,7 +39,7 @@ if (!function_exists('vitacodis_pagination')) {
      * }
      * @param string       $class           (Optional) Classes to be added to the <ul> element. Default 'pagination'.
      */
-    function vitacodis_pagination($args = array(), $class = 'pagination nav justify-content-center') {
+    function wtvglobal_pagination($args = array(), $class = 'pagination nav justify-content-center') {
 
 	if (!isset($args['total']) && $GLOBALS['wp_query']->max_num_pages <= 1) {
 	    return;
@@ -49,11 +49,11 @@ if (!function_exists('vitacodis_pagination')) {
 		$args, array(
 	    'mid_size' => 2,
 	    'prev_next' => true,
-	    'prev_text' => __('Previous page', 'vitacodis'),
-	    'next_text' => __('Next Page', 'vitacodis'),
+	    'prev_text' => __('Previous page', 'wtvglobal'),
+	    'next_text' => __('Next Page', 'wtvglobal'),
 	    'type' => 'array',
 	    'current' => max(1, get_query_var('paged')),
-	    'screen_reader_text' => __('Posts navigation', 'vitacodis'),
+	    'screen_reader_text' => __('Posts navigation', 'wtvglobal'),
 		)
 	);
 

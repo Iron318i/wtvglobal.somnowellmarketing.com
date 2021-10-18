@@ -1,49 +1,49 @@
 <?php
 /**
- * Vitacodis-theme modify editor
+ * wtvglobal-theme modify editor
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'admin_init', 'vitacodis_wpdocs_theme_add_editor_styles' );
+add_action( 'admin_init', 'wtvglobal_wpdocs_theme_add_editor_styles' );
 
-if ( ! function_exists( 'vitacodis_wpdocs_theme_add_editor_styles' ) ) {
+if ( ! function_exists( 'wtvglobal_wpdocs_theme_add_editor_styles' ) ) {
 	/**
 	 * Registers an editor stylesheet for the theme.
 	 */
-	function vitacodis_wpdocs_theme_add_editor_styles() {
+	function wtvglobal_wpdocs_theme_add_editor_styles() {
 		add_editor_style( 'css/custom-editor-style.min.css' );
 	}
 }
 
-add_filter( 'mce_buttons_2', 'vitacodis_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'wtvglobal_tiny_mce_style_formats' );
 
-if ( ! function_exists( 'vitacodis_tiny_mce_style_formats' ) ) {
+if ( ! function_exists( 'wtvglobal_tiny_mce_style_formats' ) ) {
 	/**
 	 * Reveals TinyMCE's hidden Style dropdown.
 	 *
 	 * @param array $buttons Array of Tiny MCE's button ids.
 	 * @return array
 	 */
-	function vitacodis_tiny_mce_style_formats( $buttons ) {
+	function wtvglobal_tiny_mce_style_formats( $buttons ) {
 		array_unshift( $buttons, 'styleselect' );
 		return $buttons;
 	}
 }
 
-add_filter( 'tiny_mce_before_init', 'vitacodis_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'wtvglobal_tiny_mce_before_init' );
 
-if ( ! function_exists( 'vitacodis_tiny_mce_before_init' ) ) {
+if ( ! function_exists( 'wtvglobal_tiny_mce_before_init' ) ) {
 	/**
 	 * Adds style options to TinyMCE's Style dropdown.
 	 *
 	 * @param array $settings TinyMCE settings array.
 	 * @return array
 	 */
-	function vitacodis_tiny_mce_before_init( $settings ) {
+	function wtvglobal_tiny_mce_before_init( $settings ) {
 
 		$style_formats = array(
 			array(

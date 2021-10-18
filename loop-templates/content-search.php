@@ -2,7 +2,7 @@
 /**
  * Search results partial template
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
 	?>
 	<?php if ('post' === get_post_type()) : ?>
     	<div class="entry-meta mb-1">
-		<?php vitacodis_posted_on(); ?>
+		<?php wtvglobal_posted_on(); ?>
     	</div><!-- .entry-meta -->
 	<?php endif; ?>
     </header><!-- .entry-header -->

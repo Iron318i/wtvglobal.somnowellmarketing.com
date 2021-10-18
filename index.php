@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Vitacodis-theme
+ * @package wtvglobal-theme
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
@@ -53,7 +53,7 @@ get_header();
     }
     ?>
     <!-- The pagination component -->
-    <?php vitacodis_pagination(); ?>
+    <?php wtvglobal_pagination(); ?>
 </div>
 <?php
 get_footer();
