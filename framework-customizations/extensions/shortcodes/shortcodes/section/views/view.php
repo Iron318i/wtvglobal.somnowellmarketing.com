@@ -21,7 +21,6 @@ $container_class = ( isset($atts['is_fullwidth']) && $atts['is_fullwidth'] ) ? '
 $container_class .= ( isset($atts['width']) && $atts['width'] ) ? ' ' . $atts['width'] . '' : '';
 $custome_class = ( isset($atts['custome_class']) && $atts['custome_class'] ) ? ' ' . $atts['custome_class'] . '' : '';
 $custome_class .= ( isset($atts['bgc']) && $atts['bgc'] ) ? ' ' . $atts['bgc'] . '' : '';
-$custome_class .= ( isset($atts['section_type']) && $atts['section_type'] ) ? ' ' . $atts['section_type'] . '' : '';
 $row_class = ( isset($atts['justify_content']) && $atts['justify_content'] ) ? ' ' . $atts['justify_content'] . '' : '';
 $row_class .= ( isset($atts['reverse']) && $atts['reverse'] ) ? ' ' . $atts['reverse'] . '' : '';
 $row_class .= ( isset($atts['gutters']) && $atts['gutters'] ) ? ' gx-' . $atts['gutters'] . '' : ' g-0';

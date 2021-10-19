@@ -32,6 +32,7 @@ $options = array(
 	'label' => __('Heading Color', 'fw'),
 	'choices' => array(
 	    '' => '---',
+	    'text-dark' => 'Dark',
 	    'text-white' => 'White',
 	)
     ),
@@ -40,7 +41,7 @@ $options = array(
 	'label' => __('Font weight', 'fw'),
 	'choices' => array(
 	    '' => 'Bold',
-	    'fw-light' => 'Light',
+	    'fw-semibold' => 'Semibold',
 	    'fw-normal' => 'Normal',
 	)
     ),

@@ -8,10 +8,3 @@ if (!defined('FW')) {
  * @var array $atts
  */
 ?>
-
-<?php
-
-if ($atts['shortcode']) {
-    echo do_shortcode($atts['shortcode']);
-}
-?>

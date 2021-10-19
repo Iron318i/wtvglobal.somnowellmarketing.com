@@ -11,6 +11,16 @@
     html{
 	font-size: 17px;
     }
+    .fw-heading-h2{
+	&:before,
+	    &:after{
+	    margin-top: rem(30px);
+	}
+	.fw-special-title{
+	    padding-left: rem(40px);
+	    padding-right: rem(40px);
+	}
+    }
 }
 @include media-breakpoint-up(lg) {
     .address{
