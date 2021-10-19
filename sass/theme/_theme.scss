@@ -36,3 +36,11 @@ svg.icon{
 	overflow: hidden;
     }
 }
+.footer-logo{
+    text-align: center;
+    padding: 2rem 0 4rem;
+    .logo-link{
+	display: inline-block;
+	width: rem(300px);
+    }
+}

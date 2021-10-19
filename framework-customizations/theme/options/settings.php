@@ -9,5 +9,6 @@ if (!defined('FW')) {
  * @var array $options Fill this array with options to generate framework settings form in backend
  */
 $options = array(
+    fw()->theme->get_options('footer-settings'),
     fw()->theme->get_options('general-settings'),
 );

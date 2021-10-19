@@ -9,6 +9,9 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 ?>
+<div class="footer-logo">
+    <a href="<?php echo site_url(); ?>" class="logo-link" rel="home"><img src="<?php echo wp_get_attachment_image_url(fw_get_db_settings_option('footer_logo')["attachment_id"], 'thumbnail') ?>" alt="<?php bloginfo('name'); ?>"></a>
+</div>
 <footer class="site-footer">
     <div class="container w-1440">
 	<div class="row">

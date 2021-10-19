@@ -5,22 +5,22 @@ if (!defined('FW')) {
 }
 
 $options = array(
-    'general' => array(
-	'title' => __('General', 'unyson'),
+    'footer' => array(
+	'title' => __('Footer', 'unyson'),
 	'type' => 'tab',
 	'options' => array(
-	    'team-box' => array(
-		'title' => __('Our Team', 'wtvglobal'),
+	    'header-box' => array(
+		'title' => __('Cities', 'wtvglobal'),
 		'type' => 'box',
 		'options' => array(
-		    'persons' => array(
+		    'cities' => array(
 			'type' => 'addable-popup',
-			'label' => __('Our Team', '{domain}'),
+			'label' => __('Cities', 'wtvglobal'),
 			'size' => 'large',
 			'popup-options' => array(
 			    'image' => array(
 				'type' => 'upload',
-				'label' => __('Image 110x110 px or bigger', 'fw'),
+				'label' => __('Image 600px or bigger', 'fw'),
 				'desc' => __('Either upload a new, or choose an existing image from your media library', 'fw')
 			    ),
 			    'heading' => array(
@@ -29,22 +29,28 @@ $options = array(
 			    ),
 			    'position' => array(
 				'type' => 'text',
-				'label' => __('Position', 'fw'),
+				'label' => __('Phone', 'fw'),
 			    ),
 			    'email' => array(
 				'type' => 'text',
 				'label' => __('Email', 'fw'),
 			    ),
-			    'division' => array(
-				'type' => 'text',
-				'label' => __('Division', 'fw'),
-			    ),
 			),
 			'limit' => 0, // limit the number of boxes that can be added
-			'add-button-text' => __('Add', '{domain}'),
+			'add-button-text' => __('Add', 'wtvglobal'),
 			'sortable' => true,
 			'template' => '{{- heading }}', // box title
 		    ),
+		)
+	    ),
+	    'logo-box' => array(
+		'title' => __('Logo', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'footer_logo' => array(
+			'type' => 'upload',
+			'label' => __('Footer Logo', 'fw'),
+		    )
 		)
 	    ),
 	)
