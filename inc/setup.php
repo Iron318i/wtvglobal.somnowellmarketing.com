@@ -43,7 +43,8 @@ if (!function_exists('wtvglobal_setup')) {
 	register_nav_menus(
 		array(
 		    'primary' => __('Primary Menu', 'wtvglobal'),
-		    'terms' => __('Terms Menu', 'wtvglobal')
+		    'privacy' => __('Privacy Menu', 'wtvglobal'),
+		    'footer' => __('Footer Menu', 'wtvglobal')
 		)
 	);
 

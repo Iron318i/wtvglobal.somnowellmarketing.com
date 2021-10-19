@@ -15,7 +15,7 @@
 // Layout & components
 @import "../../src/sass/bootstrap5/root";
 
-$theme-colors: map-remove($theme-colors, "dark", "secondary", "warning", "danger", "light");
+$theme-colors: map-remove($theme-colors, "dark", "secondary", "warning", "danger", "light", "info");
 
 @import "../../src/sass/bootstrap5/reboot";
 @import "../../src/sass/bootstrap5/type";
@@ -38,10 +38,10 @@ $theme-colors: map-remove($theme-colors, "dark", "secondary", "warning", "danger
 //@import "../../src/sass/bootstrap5/alert";
 //@import "../../src/sass/bootstrap5/progress";
 //@import "../../src/sass/bootstrap5/list-group";
-@import "../../src/sass/bootstrap5/close";
+//@import "../../src/sass/bootstrap5/close";
 //@import "../../src/sass/bootstrap5/toasts";
-@import "../../src/sass/bootstrap5/modal";
-@import "../../src/sass/bootstrap5/tooltip";
+//@import "../../src/sass/bootstrap5/modal";
+//@import "../../src/sass/bootstrap5/tooltip";
 //@import "../../src/sass/bootstrap5/popover";
 //@import "../../src/sass/bootstrap5/carousel";
 //@import "../../src/sass/bootstrap5/spinners";

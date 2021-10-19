@@ -4,3 +4,19 @@
 }
 @include media-breakpoint-up(md) {
 }
+@include media-breakpoint-up(xxl) {
+    html{
+	font-size: vw(22px);
+    }
+    .container{
+	max-width: rem(1630px);
+    }
+}
+@media(min-width: 2000px){
+    html{
+	font-size: 22px;
+    }
+    .container{
+	max-width: 1630px;
+    }
+}

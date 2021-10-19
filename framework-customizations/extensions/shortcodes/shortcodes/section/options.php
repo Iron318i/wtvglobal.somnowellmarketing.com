@@ -38,8 +38,8 @@ $options = array(
 	'type' => 'select',
 	'label' => __('Max Width', 'beachsweat'),
 	'choices' => array(
-	    '' => '---',
-	    'w-990' => '990px',
+	    '' => '1600px',
+	    'w-1440' => '1440px',
 	)
     ),
     'justify_content' => array(

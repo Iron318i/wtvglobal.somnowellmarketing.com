@@ -1,6 +1,6 @@
 {
     "browserSyncOptions": {
-	"proxy": "http://newwtvglobal.gip.by/",
+	"proxy": "http://wtvglobal.somnowellmarketing.com",
 	"notify": false,
 	"files": [
 	    "./css/*.min.css",

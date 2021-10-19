@@ -39,7 +39,7 @@ $options = array(
 	'type' => 'select',
 	'label' => __('Font weight', 'fw'),
 	'choices' => array(
-	    '' => 'Black',
+	    '' => 'Bold',
 	    'fw-light' => 'Light',
 	    'fw-normal' => 'Normal',
 	)
