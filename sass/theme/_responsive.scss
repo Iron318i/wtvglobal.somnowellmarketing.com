@@ -11,6 +11,9 @@
     .container{
 	max-width: rem(1630px);
     }
+    .w-1440{
+	max-width: rem(1470px);
+    }
 }
 @media(min-width: 2000px){
     html{
@@ -18,5 +21,8 @@
     }
     .container{
 	max-width: 1630px;
+    }
+    .w-1440{
+	max-width: 1470px;
     }
 }

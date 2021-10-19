@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 ?>
 <footer class="site-footer">
-    <div class="container">
+    <div class="container w-1440">
 	<div class="row">
 	    <div class="col-lg-auto">
 		<?php
@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
 			    'theme_location' => 'privacy',
 			    'container' => false,
 			    'container_class' => false,
-			    'menu_class' => 'nav',
+			    'menu_class' => 'nav privacy',
 			    'menu_id' => 'nav-links',
 			)
 		);
