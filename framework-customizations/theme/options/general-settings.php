@@ -47,6 +47,20 @@ $options = array(
 		    ),
 		)
 	    ),
+	    'conversation-box' => array(
+		'title' => __('Start a conversation', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'salesforce' => array(
+			'type' => 'textarea',
+			'label' => __('Form Code', 'fw'),
+		    ),
+		    'calendly' => array(
+			'type' => 'textarea',
+			'label' => __('Calendly inline widget', 'fw'),
+		    ),
+		)
+	    ),
 	)
     )
 );
