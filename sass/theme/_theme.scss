@@ -44,3 +44,27 @@ svg.icon{
 	width: rem(300px);
     }
 }
+.address{
+    position: relative;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    .img-city{
+	filter: grayscale(100%);
+    }
+    .info{
+	position: absolute;
+	top: 1.7rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+    }
+    .h5{
+	color: #fff;
+	margin-bottom: .5rem;
+    }
+    a{
+	color: #fff;
+	word-break: break-word;
+    }
+}

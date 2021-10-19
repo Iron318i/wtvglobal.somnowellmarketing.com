@@ -20,14 +20,14 @@ $options = array(
 			'popup-options' => array(
 			    'image' => array(
 				'type' => 'upload',
-				'label' => __('Image 600px or bigger', 'fw'),
+				'label' => __('Image 360px or bigger', 'fw'),
 				'desc' => __('Either upload a new, or choose an existing image from your media library', 'fw')
 			    ),
 			    'heading' => array(
 				'type' => 'text',
 				'label' => __('Name', 'fw'),
 			    ),
-			    'position' => array(
+			    'phone' => array(
 				'type' => 'text',
 				'label' => __('Phone', 'fw'),
 			    ),
