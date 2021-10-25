@@ -127,3 +127,55 @@ svg.icon{
 	color: $gray-800;
     }
 }
+/*team*/
+.our-team{
+    margin: 2rem auto 0;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.team-member{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 6px;
+    margin-bottom: rem(30px);
+    .inner{
+	border-radius: 6px;
+	box-shadow: 2px 4px 10px 0 rgba(#000, .21);
+	background-color: #ffffff;
+	padding: 20px 5px 3px 5px;
+	text-align: center;
+	img{
+	    border-radius: 50%;
+	    box-shadow: 2px 4px 4px 0 rgba(#000, .21);
+	    margin-bottom: 1.2rem;
+	}
+	h4{
+	    margin-bottom: 0;
+	    font-size: rem(14px);
+	    color: $gray-800;
+	}
+	.position{
+	    min-height: rem(36px);
+	    font-size: rem(12px);
+	    margin-top: 0;
+	    margin-bottom: 0;
+	}
+	.email{
+	    margin-bottom: 7px;
+	    overflow: hidden;
+	}
+	.email a{
+	    font-weight: 700;
+	    font-size: 9px;
+	    text-decoration: none;
+	    color: #202e37;
+	}
+	.division{
+	    font-size: rem(14px);
+	    padding: 10px 0 5px;
+	    border-top: 1px solid #35c0cd;
+	}
+    }
+}

@@ -131,4 +131,4 @@ add_filter('gutenberg_use_widgets_block_editor', '__return_false');
 add_filter('use_widgets_block_editor', '__return_false');
 
 
-//add_image_size('page-header', 1920, 675, array('center', 'center'));
+add_image_size('person', 110, 110, array('center', 'center'));

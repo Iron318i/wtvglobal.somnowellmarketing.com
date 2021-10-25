@@ -11,7 +11,7 @@ if (!defined('FW')) {
         <div class="team-member">
     	<div class="inner">
 		<?php if ($value['image']): ?>
-		    <div class="img"><?php echo wp_get_attachment_image($value['image']["attachment_id"], array(110, 110), false, array("class" => "card-img")); ?></div>
+		    <div class="img"><?php echo wp_get_attachment_image($value['image']["attachment_id"], 'person', false, array("class" => "person")); ?></div>
 		<?php endif; ?>
     	    <h4><?php echo $value['heading']; ?></h4>
 		<?php if ($value['position'] != ""): ?>

@@ -4,6 +4,12 @@
     }
 }
 @include media-breakpoint-up(sm) {
+    .team-member{
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+	padding: rem(0 15px);
+	margin-bottom: 30px;
+    }
 }
 @include media-breakpoint-only(sm) {
 }
@@ -23,6 +29,12 @@
     }
 }
 @include media-breakpoint-up(lg) {
+    .team-member{
+	flex: 0 0 rem(240px);
+	max-width: rem(240px);
+	padding: rem(0 15px);
+	margin-bottom: 30px;
+    }
     .address{
 	a{
 	    font-size: rem(15px);
