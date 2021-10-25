@@ -4,6 +4,8 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
+    transition: top .3s ease;
     .navbar-collapse{
 	justify-content: flex-end;
     }
@@ -40,6 +42,22 @@
     .dropdown:hover{
 	.dropdown-menu{
 	    display: block;
+	}
+    }
+    &.nav-up{
+	top: -100px;
+    }
+    &.nav-down:not(.nav-top){
+	position: fixed;
+	background-color: rgba(32,46,55,.93);
+	box-shadow: 0 4px 4px rgba(#000,.6);
+	top: 0;
+	.navbar{
+	    padding-top: .5rem;
+	    padding-bottom: .5rem;
+	}
+	.logo-link{
+	    max-width: rem(100px);
 	}
     }
 }
