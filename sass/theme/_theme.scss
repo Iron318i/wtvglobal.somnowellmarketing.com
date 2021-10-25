@@ -37,7 +37,9 @@ svg.icon{
 }
 .bg-gray{
     background-color: #f4f4f4;
-    box-shadow: 0 4px 4px rgba(#000, .25);
+}
+.bottom-shadow{
+    box-shadow: 0 8px 8px rgba(#000, .25);
 }
 .fw-heading-h2{
     display: flex;
@@ -89,6 +91,9 @@ svg.icon{
 	display: inline-block;
 	width: rem(300px);
     }
+}
+.footer-addresses{
+    padding-top: 2rem;
 }
 .address{
     position: relative;

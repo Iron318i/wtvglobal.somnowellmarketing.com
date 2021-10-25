@@ -6,15 +6,15 @@ if (!defined('FW')) {
 
 $options = array(
     'section_title' => array(
-	'label' => __('Section Title', 'beachsweat'),
+	'label' => __('Section Title', 'wtvglobal'),
 	'type' => 'text',
     ),
     'is_fullwidth' => array(
-	'label' => __('Full Width', 'beachsweat'),
+	'label' => __('Full Width', 'wtvglobal'),
 	'type' => 'switch',
     ),
     'type' => array(
-	'label' => __('Wrapper Type', 'beachsweat'),
+	'label' => __('Wrapper Type', 'wtvglobal'),
 	'type' => 'switch',
 	'left-choice' => array(
 	    'value' => 'section',
@@ -27,7 +27,7 @@ $options = array(
     ),
     'width' => array(
 	'type' => 'select',
-	'label' => __('Max Width', 'beachsweat'),
+	'label' => __('Max Width', 'wtvglobal'),
 	'choices' => array(
 	    '' => '1600px',
 	    'w-1440' => '1440px',
@@ -46,7 +46,7 @@ $options = array(
     ),
     'reverse' => array(
 	'type' => 'select',
-	'label' => __('Row reverse', 'beachsweat'),
+	'label' => __('Row reverse', 'wtvglobal'),
 	'choices' => array(
 	    '' => '---',
 	    'flex-lg-row-reverse' => 'Up Large',
@@ -55,14 +55,14 @@ $options = array(
     ),
     'bgc' => array(
 	'type' => 'select',
-	'label' => __('Background Color', 'beachsweat'),
+	'label' => __('Background Color', 'wtvglobal'),
 	'choices' => array(
 	    '' => 'None',
 	    'bg-gray' => 'Gray',
 	)
     ),
     'gutters' => array(
-	'label' => __('Horizontal gutters', 'beachsweat'),
+	'label' => __('Horizontal gutters', 'wtvglobal'),
 	'type' => 'slider',
 	'value' => 2,
 	'properties' => array(
@@ -72,7 +72,7 @@ $options = array(
 	),
     ),
     'padding_top' => array(
-	'label' => __('Top Padding size', 'beachsweat'),
+	'label' => __('Top Padding size', 'wtvglobal'),
 	'type' => 'slider',
 	'value' => 3,
 	'properties' => array(
@@ -82,7 +82,7 @@ $options = array(
 	),
     ),
     'padding_bottom' => array(
-	'label' => __('Padding Bottom', 'beachsweat'),
+	'label' => __('Padding Bottom', 'wtvglobal'),
 	'type' => 'slider',
 	'value' => 3,
 	'properties' => array(
@@ -92,15 +92,19 @@ $options = array(
 	),
     ),
     'background_image' => array(
-	'label' => __('Background Image', 'beachsweat'),
-	'desc' => __('Please select the background image', 'beachsweat'),
+	'label' => __('Background Image', 'wtvglobal'),
+	'desc' => __('Please select the background image', 'wtvglobal'),
 	'type' => 'background-image',
 	'choices' => array(//	in future may will set predefined images
 	)
     ),
+    'is_shadow' => array(
+	'label' => __('Shadow', 'wtvglobal'),
+	'type' => 'switch',
+    ),
     'custome_class' => array(
-	'label' => __('Custome section class', 'beachsweat'),
-	'desc' => __('Insert Custome section class', 'beachsweat'),
+	'label' => __('Custome section class', 'wtvglobal'),
+	'desc' => __('Insert Custome section class', 'wtvglobal'),
 	'type' => 'text',
     ),
 );

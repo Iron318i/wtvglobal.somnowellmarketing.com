@@ -53,9 +53,8 @@ function register_wtvglobal_post_type() {
 	'show_in_menu' => true,
 	'exclude_from_search' => false,
 	'rewrite' => array('slug' => 'jobs', 'with_front' => false),
-	'has_archive' => 'jobs',
 	'capability_type' => 'post',
-	'supports' => array('title', 'editor', 'thumbnail'),
+	'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
 	'hierarchical' => false,
 	'query_var' => true
     ));

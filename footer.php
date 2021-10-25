@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 			<?php echo wp_get_attachment_image($value['image']["attachment_id"], array(360, 250), false, array("class" => 'img-city')); ?>
     		    <div class="info">
     			<h4 class="h5"><?php echo $value['heading'] ?></h4>
-    			<div><a href="tel:<?php echo $value['phone'] ?>"><?php echo $value['phone'] ?></a></div>
+    			<div><a href="tel:<?php echo preg_replace("/[^0-9]/", '', $value['phone']) ?>"><?php echo $value['phone'] ?></a></div>
     			<div><a href="mailto:<?php echo $value['email'] ?>"><?php echo $value['email'] ?></a></div>
     		    </div>
     		</div>
