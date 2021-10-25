@@ -337,12 +337,14 @@ $dropdown-link-hover-color: $dropdown-link-color;
 
 // scss-docs-start card-variables
 $card-border-width: 0;
-$card-border-radius: 0;
+$card-border-radius: 4px;
 $card-cap-padding-y: rem(9px);
 $card-cap-padding-x: 1rem;
 $card-spacer-y: 1rem;
 $card-spacer-x: 1rem;
-$card-bg: $gray-700;
+$card-bg: $white;
+$card-box-shadow: 1px 5px rgba(#000, .1);
+$card-title-spacer-y: .3rem;
 // scss-docs-end card-variables
 
 // Accordion

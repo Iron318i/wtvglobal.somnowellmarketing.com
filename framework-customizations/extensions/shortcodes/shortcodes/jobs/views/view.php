@@ -4,7 +4,7 @@ if (!defined('FW')) {
 }
 ?>
 <div class="recent-jobs">
-    <div class="row row-cols-md-3">
+    <div class="row cards-row">
 	<?php
 	$args = array(
 	    'posts_per_page' => -1,
@@ -23,7 +23,7 @@ if (!defined('FW')) {
 			<div class="card-body">
 			    <h5 class="card-title"><?php the_title(); ?></h5>
 			    <div class="card-text"><?php the_excerpt(); ?></div>
-			    <a href="#" class="stretched-link"></a>
+			    <a href="<?php the_permalink() ?>" class="stretched-link"></a>
 			</div>
 		    </div>
 		</div>

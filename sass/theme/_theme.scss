@@ -195,3 +195,30 @@ svg.icon{
 	text-shadow: rem(0 0 10px) rgba(#000, .85);
     }
 }
+.cards-row{
+    justify-content: center;
+    > .col{
+	display: flex;
+	align-items: stretch;
+	margin-bottom: 1.5rem;
+	flex: 0 0 auto;
+	width: 100%;
+    }
+}
+.card{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: $card-box-shadow;
+    transition:transform .5s ease;
+    &:hover{
+	transform: scale(1.05);
+    }
+    .card-title{
+	color: #202e37;
+	@include font-size(rem(22px));
+    }
+    .card-text{
+	font-size: rem(18px);
+    }
+}

@@ -2,6 +2,9 @@
     html{
 	font-size: 16px;
     }
+    .cards-row{
+	--bs-gutter-x: .5rem;
+    }
 }
 @include media-breakpoint-up(sm) {
     .team-member{
@@ -9,6 +12,9 @@
 	max-width: 33.3%;
 	padding: rem(0 15px);
 	margin-bottom: 30px;
+    }
+    .cards-row> *{
+	width: 50%;
     }
 }
 @include media-breakpoint-up(md) {
@@ -47,6 +53,9 @@
 	h1{
 	    font-size: vw(125px);
 	}
+    }
+    .cards-row> *{
+	width: 25%;
     }
 }
 @include media-breakpoint-up(xl) {
