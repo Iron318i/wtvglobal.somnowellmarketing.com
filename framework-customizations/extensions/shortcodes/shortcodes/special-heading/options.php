@@ -55,9 +55,18 @@ $options = array(
 	    'step' => 1, // Set slider step. Always > 0. Could be fractional.
 	),
     ),
-    'centered' => array(
+    'alignment' => array(
+	'type' => 'select',
+	'label' => __('Text alignment', 'fw'),
+	'choices' => array(
+	    'text-start' => 'Left',
+	    'text-center' => 'Center',
+	    'text-end' => 'Right',
+	)
+    ),
+    'lines' => array(
 	'type' => 'switch',
-	'label' => __('Centered', 'fw'),
+	'label' => __('Lines', 'fw'),
     ),
     'ttu' => array(
 	'type' => 'switch',

@@ -58,7 +58,7 @@ $options = array(
 	'label' => __('Background Color', 'beachsweat'),
 	'choices' => array(
 	    '' => 'None',
-	    'bg-primary' => 'Orange',
+	    'bg-gray' => 'Gray',
 	)
     ),
     'gutters' => array(

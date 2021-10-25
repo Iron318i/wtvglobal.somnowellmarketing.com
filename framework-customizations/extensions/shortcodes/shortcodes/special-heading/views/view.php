@@ -30,8 +30,10 @@ $style = '';
 if ($atts['mw'] > 0) {
     $style = 'style = "max-width: ' . $atts['mw'] / 16 . 'rem;"';
 }
+$heading_class = ($atts['alignment']) ? ' ' . $atts['alignment'] : '';
+$heading_class .= ($atts['lines']) ? ' lines' : '';
 ?>
-<div class="fw-heading fw-heading-<?php echo esc_attr($atts['heading']); ?><?php echo!empty($atts['centered']) ? ' text-center' : ''; ?>" <?= $style ?>>
+<div class="fw-heading fw-heading-<?php echo esc_attr($atts['heading']); ?><?php echo $heading_class; ?>" <?= $style ?>>
     <?php if (!empty($atts['subtitle'])): ?>
         <div class="fw-special-subtitle"><?php echo $atts['subtitle']; ?></div>
     <?php endif; ?>
