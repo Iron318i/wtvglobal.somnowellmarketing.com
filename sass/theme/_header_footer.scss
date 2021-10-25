@@ -7,6 +7,41 @@
     .navbar-collapse{
 	justify-content: flex-end;
     }
+    .dropdown-item,
+    .nav-link{
+	text-transform: lowercase;
+	position: relative;
+	&:after{
+	    content: ".";
+	}
+	&:before {
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    bottom: -2px;
+	    width: 0;
+	    height: 2px;
+	    background-color: #fff;
+	    transition: width .3s ease;
+	}
+	&:hover::before {
+	    width: 100%;
+	}
+    }
+    .dropdown-item{
+	font-weight: 500!important;
+    }
+    .fw-normal .nav-link{
+	font-weight: 400;
+    }
+    .contact-us .nav-link{
+	color: $cyan!important;
+    }
+    .dropdown:hover{
+	.dropdown-menu{
+	    display: block;
+	}
+    }
 }
 .navbar-toggler{
     border:0 none;
@@ -91,6 +126,15 @@
 	li+li{
 	    padding-left: 15px;
 	    border-left: 1px solid #fff;
+	}
+    }
+}
+@include media-breakpoint-up(lg) {
+    .site-header{
+	.navbar-nav{
+	    > .menu-item{
+		margin-left: rem(25px);
+	    }
 	}
     }
 }

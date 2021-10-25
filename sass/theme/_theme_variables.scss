@@ -289,9 +289,9 @@ $form-label-margin-bottom: 0;
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-font-size: rem(17px);
-$nav-link-font-weight: 400;
-$nav-link-padding-y: rem(6.5px);
+$nav-link-font-size: rem(19px);
+$nav-link-font-weight: 900;
+$nav-link-padding-y: 0;
 $nav-link-padding-x: rem(10px);
 
 // scss-docs-end nav-variables
@@ -303,24 +303,25 @@ $navbar-toggler-focus-width: 0;
 $navbar-padding-y: rem(30px);
 
 $navbar-dark-color: #fff;
-$navbar-dark-hover-color: $primary;
-$navbar-dark-active-color: $primary;
+$navbar-dark-hover-color: #fff;
+$navbar-dark-active-color: #fff;
 
-$navbar-nav-link-padding-x: rem(10px);
+$navbar-nav-link-padding-x: 0;
 
 // Dropdowns
-//
-// Dropdown menu container and contents.
-
-// scss-docs-start dropdown-variables
-$dropdown-font-size:  rem(13px);
+$dropdown-min-width: 8rem;
+$dropdown-font-size:  rem(19px);
 $dropdown-item-padding-x: 1rem;
-// scss-docs-end dropdown-variables
+$dropdown-bg: rgba(32,46,55,.93);
+$dropdown-link-color: #fff;
+$dropdown-item-padding-y: 0;
+$dropdown-item-padding-x: 0;
 
-// scss-docs-start dropdown-dark-variables
-// scss-docs-end dropdown-dark-variables
+$dropdown-padding-y: 10px;
+$dropdown-padding-x: 10px;
 
-
+$dropdown-link-hover-bg: $dropdown-bg;
+$dropdown-link-hover-color: $dropdown-link-color;
 // Pagination
 
 // scss-docs-start pagination-variables
