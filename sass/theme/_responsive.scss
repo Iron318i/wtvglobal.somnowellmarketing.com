@@ -11,8 +11,6 @@
 	margin-bottom: 30px;
     }
 }
-@include media-breakpoint-only(sm) {
-}
 @include media-breakpoint-up(md) {
     html{
 	font-size: 17px;
@@ -71,5 +69,24 @@
     }
     .w-1440{
 	max-width: 1470px;
+    }
+}
+@include media-breakpoint-down(md) {
+    .fw-heading.lines{
+	justify-content: center;
+	text-align: center!important;
+	&:before,
+	    &:after{
+	    content: '';
+	    height: 1px;
+	    margin-top: rem(20px)!important;
+	    flex-grow: 1;
+	    background-color: $gray-800;
+	}
+	.fw-special-title{
+	    padding-left: rem(20px);
+	    padding-right: rem(20px);
+	    max-width: 80%;
+	}
     }
 }
