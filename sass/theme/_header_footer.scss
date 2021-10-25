@@ -156,7 +156,37 @@
 	}
     }
 }
+@include media-breakpoint-down(md) {
+    .site-header{
+	.navbar-collapse{
+	    padding: 1rem;
+	    font-size: 20px;
+	    position: absolute;
+	    z-index: 99;
+	    left: 0;
+	    right: 0;
+	    top: 100%;
+	    background-color: rgba(32,46,55,.93);
+	}
+	.nav-link{
+	    font-size: 20px;
+	    padding: 5px 0;
+	}
+	.dropdown-item{
+	    font-size: 18px;
+	    padding: 5px 0;
+	}
+	.dropdown-menu{
+	    display: block;
+	}
+    }
+}
 @include media-breakpoint-down(sm) {
+    .site-header{
+	.logo-link{
+	    width: rem(120px);
+	}
+    }
     .site-footer{
 	.nav{
 	    justify-content: center;

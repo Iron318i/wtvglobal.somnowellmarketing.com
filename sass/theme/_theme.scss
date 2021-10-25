@@ -185,9 +185,8 @@ svg.icon{
     display: flex;
     align-items: center;
     color: #fff;
-    font-size: rem(28px);
+    @include font-size(rem(28px));
     h1{
-	font-size: vw(125px);
 	text-shadow: rem(0 0 10px) rgba(#000, .85);
     }
 }

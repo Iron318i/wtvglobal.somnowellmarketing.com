@@ -45,6 +45,11 @@
 	    padding-top: 2.4rem;
 	}
     }
+    #page-header{
+	h1{
+	    font-size: vw(125px);
+	}
+    }
 }
 @include media-breakpoint-up(xl) {
     html{
