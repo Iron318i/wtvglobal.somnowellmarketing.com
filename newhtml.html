@@ -1,9 +1,62 @@
-<div class="row">
-<div class="col-12">[text* si-firstname placeholder "First Name"][/text*]</div>
-<div class="col-12">[text* si-lastname placeholder "Last Name"][/text*]</div>
-<div class="col-12">[email* si-email placeholder "Email"][/email*]</div>
-<div class="col-12">[password* si-password placeholder "Password"][/password*]</div>
-<div class="col-12">[password* si-confirm placeholder "Confirm Password"][/password*]</div>
-<div class="col-12">[checkbox si-update use_label_element "Send Me Latest Updates"]</div>
-<div class="col-12">[submit "CREATE ACCOUNT"]</div>
-</div>
+<SCRIPT>
+    function required()
+    {
+	var empt = document.forms["SFForm1"]["country"].value;
+	if (empt == "none")
+	{
+	    alert("Please select a Territory.");
+	    return false;
+	} else
+	{
+	    return true;
+	}
+    }
+</SCRIPT>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"  name="SFForm1" onsubmit="return required()">
+    <input type=hidden name='captcha_settings' value='{"keyname":"wtvglobal","fallback":"true","orgId":"00Db0000000JLjs","ts":""}'>
+    <input type=hidden name="oid" value="00Db0000000JLjs">
+    <input type=hidden name="retURL" value="https://wtvglobal.com/thankyou/">
+    <input type=hidden name="Subject" id="00N0X00000ARm5o" name="00N0X00000ARm5o">
+    <!-- Lead Source -->
+    <input type="hidden" id="lead_source" name="lead_source" value="Website" />
+    <input type="hidden" id="00N0X00000DZ8lW" name="00N0X00000DZ8lW" value="" />
+    <!-- Lead_Origin_c -->
+    <input type="hidden" id="00N0X00000CrXh1"  name="00N0X00000CrXh1" value="digital"/>
+    <!-- Lead GCLID -->
+    <input type="hidden" id="gclid" name="GCLID__c" value="website-uk-contact"/>
+    <div class="mb-1">
+	<label for="first_name" class="form-label">First Name*</label>
+	<input id="first_name" class="form-control" maxlength="40" name="first_name" size="20" type="text" required="">
+    </div>
+    <div class="mb-1">
+	<label for="last_name" class="form-label">Last Name*</label>
+	<input  id="last_name" class="form-control" maxlength="80" name="last_name" size="20" type="text" required="">
+    </div>
+    <div class="mb-1">
+	<label for="email" class="form-label">Business Email*</label>
+	<input  id="email" class="form-control" maxlength="80" name="email" size="20" type="text" required="">
+    </div>
+    <div class="mb-1">
+	<label for="country" class="form-label">Territory*</label>
+	<select class="form-select" name="country" id="country">
+	    <option value="none">Please select</option>
+	    <option value="Hong Kong">Hong Kong</option>
+	    <option value="Spain">Spain</option>
+	    <option value="Geneva">Geneva</option>
+	    <option value="Germany">Germany</option>
+	    <option value="UK">UK</option>
+	    <option value="Other">Other</option>
+	</select>
+    </div>
+    <div class="mb-1">
+	<label for="description" class="form-label">Message:</label>
+	<textarea class="form-control" name="description"></textarea>
+    </div>
+    <div class="virtual-events-box">
+	<h4 class="h4">Get our 50 page Guide to Virtual Events</h2>
+	    <div class="img">
+		<img width="300" height="138" src="https://wtvglobal.com/wp-content/uploads/2021/02/virtual-events-300x138.png" class="vc_single_image-img attachment-medium" alt="" loading="lazy" srcset="https://wtvglobal.com/wp-content/uploads/2021/02/virtual-events-300x138.png 300w, https://wtvglobal.com/wp-content/uploads/2021/02/virtual-events-400x184.png 400w, https://wtvglobal.com/wp-content/uploads/2021/02/virtual-events.png 616w" sizes="(max-width: 300px) 100vw, 300px">
+	    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" name="submit" value="Send now and get the free guide">
+</form>

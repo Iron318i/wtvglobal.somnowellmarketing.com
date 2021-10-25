@@ -7,8 +7,8 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff;
-$gray-100: #f8f9fa;//
-$gray-200: #e9ecef;//
+$gray-100: #f6f6f6;
+$gray-200: #e3e3e3;
 $gray-300: #dee2e6;//
 $gray-400: #ced4da;//
 $gray-500: #adb5bd;//
@@ -203,7 +203,7 @@ $h1-font-size:  rem(64px);//
 $h2-font-size:  rem(50px);
 $h3-font-size:  rem(38px);
 $h4-font-size:  rem(30px);
-$h5-font-size:  rem(22px);
+$h5-font-size:  rem(25px);
 
 $headings-font-weight: 700;
 $headings-color:  $gray-700;
@@ -226,7 +226,7 @@ $headings-color:  $gray-700;
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-x: rem(15px);
-$input-btn-padding-y: rem(9px);
+$input-btn-padding-y: rem(12.5px);
 
 $input-font-weight: 300;
 // scss-docs-end input-btn-variables
@@ -253,8 +253,8 @@ $btn-font-size-sm: rem(17px);
 
 // Forms
 
-$input-bg: #ffffff;
-$input-border-color: #fff;
+$input-bg: $gray-100;
+$input-border-color: $gray-200;
 $input-color: $gray-900;
 $input-font-size: rem(16px);
 $input-placeholder-color: $gray-600;
@@ -269,6 +269,8 @@ $input-group-addon-bg: #fff;
 $input-group-addon-padding-x: rem(10px);
 
 $form-check-input-border-radius: 0;
+
+$form-label-margin-bottom: 0;
 
 // Form validation
 

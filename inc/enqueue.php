@@ -15,7 +15,7 @@ if (!function_exists('wtvglobal_scripts')) {
      */
     function wtvglobal_scripts() {
 	// Get the theme data.
-	wp_enqueue_style('fonts-styles', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap', [], null);
+	wp_enqueue_style('fonts-styles', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap', [], null);
 	$the_theme = wp_get_theme();
 	$theme_version = $the_theme->get('Version');
 	$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/css/theme.min.css');
