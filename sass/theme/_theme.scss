@@ -254,7 +254,7 @@ svg.icon{
     h3, h4{
 	font-size: 18px;
     }
-    a{
+    a:not(.btn){
 	text-decoration: underline;
     }
 }
