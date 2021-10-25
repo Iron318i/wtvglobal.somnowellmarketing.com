@@ -179,3 +179,15 @@ svg.icon{
 	}
     }
 }
+#page-header{
+    min-height: rem(580px);
+    padding: 7rem 0 3rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: rem(28px);
+    h1{
+	font-size: vw(125px);
+	text-shadow: rem(0 0 10px) rgba(#000, .85);
+    }
+}
