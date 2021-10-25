@@ -25,7 +25,7 @@ function register_wtvglobal_post_type() {
 	'show_in_menu' => true,
 	'exclude_from_search' => false,
 	'rewrite' => array('slug' => 'work', 'with_front' => false),
-	'has_archive' => 'work',
+	'has_archive' => false,
 	'capability_type' => 'post',
 	'supports' => array('title', 'editor', 'thumbnail'),
 	'hierarchical' => false,

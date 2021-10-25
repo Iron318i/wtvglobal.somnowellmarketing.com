@@ -41,7 +41,7 @@ svg.icon{
 .bottom-shadow{
     box-shadow: 0 8px 8px rgba(#000, .25);
 }
-.fw-heading-h2{
+.fw-heading-h2.lines{
     display: flex;
     justify-content: center;
     &:before,
@@ -188,7 +188,7 @@ svg.icon{
 }
 #page-header{
     min-height: 300px;
-    padding: 7rem 0 3rem;
+    padding: 5rem 0 3rem;
     display: flex;
     align-items: center;
     color: #fff;
@@ -223,6 +223,22 @@ svg.icon{
     .card-text{
 	font-size: rem(18px);
     }
+    .card-img-top{
+	position: relative;
+	&:after{
+	    content: '';
+	    position: absolute;
+	    z-index: 2;
+	    bottom: -1px;
+	    left: 50%;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 7px 7px 7px;
+	    border-color: transparent transparent #ffffff transparent;
+	    transform: translateX(-50%);
+	}
+    }
 }
 .single-header{
     background-size: cover;
@@ -240,5 +256,28 @@ svg.icon{
     }
     a{
 	text-decoration: underline;
+    }
+}
+#work-header{
+    min-height: 300px;
+    padding: 5rem 0 2rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    &:before{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: rgba(#000, .3);
+    }
+    h1{
+	font-size: vw(122px);
+	margin: 0;
+	opacity: .2;
+	text-shadow: 0 0 10px rgba(#000, .85);
     }
 }

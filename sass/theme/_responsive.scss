@@ -19,6 +19,7 @@
     #page-header{
 	min-height: rem(580px);
     }
+    #work-header,
     .single-header{
 	min-height: rem(400px);
     }
@@ -27,7 +28,7 @@
     html{
 	font-size: 17px;
     }
-    .fw-heading-h2{
+    .fw-heading-h2.lines{
 	&:before,
 	    &:after{
 	    margin-top: rem(30px);
@@ -37,10 +38,10 @@
 	    padding-right: rem(40px);
 	}
     }
-    .single-content{
+    .row > .single-content{
 	width: calc(100% - 170px);
     }
-    .aside{
+    .row > .aside{
 	width: 170px;
     }
 }

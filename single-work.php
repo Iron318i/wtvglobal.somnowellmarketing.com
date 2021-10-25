@@ -1,11 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * The template for displaying all single posts
  *
  * @package wtvglobal-theme
  */
@@ -14,7 +9,7 @@ defined('ABSPATH') || exit;
 
 get_header();
 ?>
-<div id="content" tabindex="-1">
+<div id="content" class="single-content">
     <?php
     while (have_posts()) {
 	the_post();
@@ -26,6 +21,7 @@ get_header();
 	}
     }
     ?>
-</div><!-- #content -->
+</div>
 <?php
+get_template_part('template-parts/start-conversation');
 get_footer();
