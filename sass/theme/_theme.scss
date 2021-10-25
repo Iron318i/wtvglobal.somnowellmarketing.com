@@ -19,10 +19,8 @@ svg.icon{
     width: 1em;
     height: 1em;
 }
-.invalid{
-    .form-control:invalid{
-	border-color: $primary;
-    }
+.btn-primary{
+    box-shadow: 0 2px 12px rgba(#000, .28);
 }
 .text-dark{
     color: $gray-800;
@@ -91,4 +89,10 @@ svg.icon{
     @include border-radius($input-border-radius, 0);
     display: flex;
     align-items: center;
+    padding: rem(20px);
+    margin-bottom: 2rem;
+    .h5{
+	margin-bottom: 0;
+	color: $gray-800;
+    }
 }

@@ -28,6 +28,11 @@
 	    font-size: rem(15px);
 	}
     }
+    .start-conversation{
+	.col-md-6:first-child{
+	    padding-top: 2.4rem;
+	}
+    }
 }
 @include media-breakpoint-up(xl) {
     html{

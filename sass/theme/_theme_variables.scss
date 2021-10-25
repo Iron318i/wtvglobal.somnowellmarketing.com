@@ -26,16 +26,18 @@ $black:    #000;//
 
 // scss-docs-start color-variables
 $cyan:  #35c0cd;
+$green:  #207072;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
 $colors: (
-"cyan": $cyan
+"cyan": $cyan,
+"green": $green
 );
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       $cyan;
+$primary: $green;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -62,8 +64,7 @@ $color-contrast-light:     $white;
 // Characters which are escaped by the escape-svg function
 
 // Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
+
 
 // Prefix for :root CSS variables
 // Gradient
@@ -237,11 +238,13 @@ $input-font-weight: 300;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-font-weight: 900;
+$btn-font-weight: 700;
 $btn-border-width: 1px;
-$btn-font-size: rem(21px);
-$btn-padding-x: rem(28px);
-$btn-padding-y: rem(10.5px);
+$btn-font-size: rem(20px);
+$btn-padding-x: rem(35px);
+$btn-padding-y: rem(7px);
+$btn-border-radius: 1.5rem;
+
 $btn-padding-y-lg: rem(10px);
 $btn-padding-x-lg: rem(20px);
 $btn-font-size-lg: rem(20px);
@@ -451,34 +454,3 @@ $dot-height: $dot-width;
 $dot-margin: 10px 3px;
 $dot-background-active: $primary;
 $dot-background: $gray-200;
-
-// bootstrap-slider.js
-
-$slider-line-height: 20px !default;
-$slider-border-radius: 4px !default;
-$slider-horizontal-width: 100%;
-$slider-vertical-height: 210px !default;
-
-// Primary colors
-$slider-primary: $primary;
-@if variable-exists(brand-primary) {
-    $slider-primary: $brand-primary !default;
-} @else {
-    $slider-primary: #0480BE !default;
-}
-
-$slider-primary-top: $slider-primary !default;
-$slider-primary-bottom: darken($slider-primary, 5%) !default;
-$slider-secondary-top: saturate(lighten($slider-primary, 28%), 20%) !default;
-$slider-secondary-bottom: saturate(lighten($slider-primary, 23%), 2%) !default;
-
-// grays for slider channel and disabled states
-$slider-gray-1: #BEBEBE !default;
-$slider-gray-2: #DFDFDF !default;
-$slider-gray-3: #E5E5E5 !default;
-$slider-gray-4: #E9E9E9 !default;
-$slider-gray-5: #f8e4e9 !default;
-$slider-gray-6: #f8e4e9 !default;
-
-// unicode color for demo page
-$slider-unicode-color: #726204 !default;
