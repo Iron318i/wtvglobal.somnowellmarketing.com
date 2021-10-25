@@ -8,13 +8,7 @@
 defined('ABSPATH') || exit;
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <header class="entry-header mb-2">
-	<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-	<div class="entry-meta">
-	    <?php wtvglobal_posted_on(); ?>
-	</div><!-- .entry-meta -->
-    </header><!-- .entry-header -->
-    <div class="entry-content mt-2">
+    <div class="entry-content">
 	<?php
 	echo wpautop($post->post_content);
 	?>

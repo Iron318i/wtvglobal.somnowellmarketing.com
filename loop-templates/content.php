@@ -7,14 +7,13 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 ?>
-
-<div class="col-md-6 col-lg-4 mb-2">
-    <article  <?php post_class('card h-100 text-center'); ?>>
-	<?php echo get_the_post_thumbnail($post->ID, 'thumbnail', array("class" => "card-img-top")); ?>
+<div class="col">
+    <div class="card">
+	<?php echo get_the_post_thumbnail(get_the_ID(), 'thumbnail', array('class' => 'card-img-top')); ?>
 	<div class="card-body">
-	    <h3 class="card-title"><?php the_title() ?></h3>
-	    <?php the_excerpt(); ?>
-	    <p class=""><a href="<?php the_permalink() ?>">Read More</a></p>
+	    <h5 class="card-title"><?php the_title(); ?></h5>
+	    <div class="card-text"><?php the_excerpt(); ?></div>
+	    <a href="<?php the_permalink() ?>" class="stretched-link"></a>
 	</div>
-    </article>
+    </div>
 </div>

@@ -13,8 +13,14 @@
 	padding: rem(0 15px);
 	margin-bottom: 30px;
     }
-    .cards-row> *{
+    .cards-row> .col{
 	width: 50%;
+    }
+    #page-header{
+	min-height: rem(580px);
+    }
+    .single-header{
+	min-height: rem(400px);
     }
 }
 @include media-breakpoint-up(md) {
@@ -30,6 +36,12 @@
 	    padding-left: rem(40px);
 	    padding-right: rem(40px);
 	}
+    }
+    .single-content{
+	width: calc(100% - 170px);
+    }
+    .aside{
+	width: 170px;
     }
 }
 @include media-breakpoint-up(lg) {
@@ -54,7 +66,7 @@
 	    font-size: vw(125px);
 	}
     }
-    .cards-row> *{
+    .cards-row> .col{
 	width: 25%;
     }
 }

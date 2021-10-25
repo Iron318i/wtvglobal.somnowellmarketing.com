@@ -59,6 +59,7 @@ svg.icon{
 }
 .fw-heading.lines{
     display: flex;
+    &.text-center,
     &.text-start{
 	&:after{
 	    content: '';
@@ -71,6 +72,7 @@ svg.icon{
 	    padding-right: rem(20px);
 	}
     }
+    &.text-center,
     &.text-end{
 	&:before{
 	    content: '';
@@ -185,7 +187,7 @@ svg.icon{
     }
 }
 #page-header{
-    min-height: rem(580px);
+    min-height: 300px;
     padding: 7rem 0 3rem;
     display: flex;
     align-items: center;
@@ -220,5 +222,23 @@ svg.icon{
     }
     .card-text{
 	font-size: rem(18px);
+    }
+}
+.single-header{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    min-height: rem(300px);
+}
+.single-content{
+    font-size: 16px;
+    h1, h2{
+	@include font-size(rem(30px));
+    }
+    h3, h4{
+	font-size: 18px;
+    }
+    a{
+	text-decoration: underline;
     }
 }
