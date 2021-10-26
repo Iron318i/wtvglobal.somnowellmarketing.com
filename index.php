@@ -23,45 +23,48 @@ $page_for_posts = get_option('page_for_posts');
 	</div>
     </div>
 </section>
-<div class="container w-1440 py-3" id="content" tabindex="-1">
-    <ul class="blog-cats nav">
-	<li><a href="#all" class="active">All</a></li>
-	<?php
-	$terms = get_terms([
-	    'taxonomy' => 'category'
-	]);
-	if ($terms && !is_wp_error($terms)) {
-	    foreach ($terms as $term) {
-		echo '<li><a href="#tax-' . $term->term_id . '">' . $term->name . '</a></li>';
-	    }
-	}
-	?>
-    </ul>
-    <?php
-    if (have_posts()) {
-	// Start the Loop.
-	?>
-        <div class="row cards-row">
+<div class="bottom-shadow">
+    <div class="container w-1440 py-3" id="content" tabindex="-1">
+	<ul class="blog-cats nav">
+	    <li><a href="#all" class="active">All</a></li>
 	    <?php
-	    while (have_posts()) {
-		the_post();
-
-		/*
-		 * Include the Post-Format-specific template for the content.
-		 * If you want to override this in a child theme, then include a file
-		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-		 */
-		get_template_part('loop-templates/content');
+	    $terms = get_terms([
+		'taxonomy' => 'category'
+	    ]);
+	    if ($terms && !is_wp_error($terms)) {
+		foreach ($terms as $term) {
+		    echo '<li><a href="#tax-' . $term->term_id . '">' . $term->name . '</a></li>';
+		}
 	    }
 	    ?>
-        </div><!-- .row -->
+	</ul>
 	<?php
-    } else {
-	get_template_part('loop-templates/content', 'none');
-    }
-    ?>
-    <!-- The pagination component -->
-    <?php wtvglobal_pagination(); ?>
+	if (have_posts()) {
+	    // Start the Loop.
+	    ?>
+            <div class="row cards-row">
+		<?php
+		while (have_posts()) {
+		    the_post();
+
+		    /*
+		     * Include the Post-Format-specific template for the content.
+		     * If you want to override this in a child theme, then include a file
+		     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		     */
+		    get_template_part('loop-templates/content');
+		}
+		?>
+            </div><!-- .row -->
+	    <?php
+	} else {
+	    get_template_part('loop-templates/content', 'none');
+	}
+	?>
+	<!-- The pagination component -->
+	<?php wtvglobal_pagination(); ?>
+    </div>
 </div>
 <?php
+get_template_part('template-parts/start-conversation');
 get_footer();

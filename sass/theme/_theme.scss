@@ -28,12 +28,14 @@ svg.icon{
 .fw-semibold{
     font-weight: 600;
 }
+.fsz-25{
+    font-size: rem(25px);
+}
 /*Section*/
 .content-section{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-    overflow: hidden;
 }
 .background-video{
     background-color: #000;
@@ -346,5 +348,36 @@ svg.icon{
     padding-left: 0;
     a{
 	font-size: rem(18px);
+    }
+}
+.our-partners{
+    justify-content: center;
+    > .col{
+	display: flex;
+	align-items: stretch;
+	margin-bottom: 1.5rem;
+	flex: 0 0 auto;
+	width: 100%;
+    }
+}
+.partner{
+    background-color: #fff;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.1);
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .img{
+	display: flex;
+	flex-direction: column;
+	min-height: rem(195px);
+	padding: 2rem;
+	align-items: center;
+	justify-content: center;
+    }
+    .text{
+	padding: rem(20px);
+	font-size: rem(16px);
+	text-align: center;
     }
 }

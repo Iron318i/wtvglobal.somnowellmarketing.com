@@ -11,4 +11,5 @@ if (!defined('FW')) {
 $options = array(
     fw()->theme->get_options('footer-settings'),
     fw()->theme->get_options('general-settings'),
+    fw()->theme->get_options('content-settings'),
 );
