@@ -183,6 +183,9 @@ gulp.task('scripts', function () {
     var scripts = [
 	// Start - All BS4 stuff
 	paths.dev + '/js/bootstrap5/bootstrap.bundle.js',
+	paths.dev + '/js/formstone/core.js',
+	paths.dev + '/js/formstone/transition.js',
+	paths.dev + '/js/formstone/background.js',
 	paths.dev + '/js/themejs/*.js',
 
 	// End - All BS4 stuff

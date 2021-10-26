@@ -98,6 +98,11 @@ $options = array(
 	'choices' => array(//	in future may will set predefined images
 	)
     ),
+    'video' => array(
+	'label' => __('Background Video', 'fw'),
+	'desc' => __('Insert Video URL to embed this video', 'fw'),
+	'type' => 'text',
+    ),
     'is_shadow' => array(
 	'label' => __('Shadow', 'wtvglobal'),
 	'type' => 'switch',

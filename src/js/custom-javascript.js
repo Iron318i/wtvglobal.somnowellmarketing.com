@@ -65,4 +65,13 @@
 	    $('.cards-row .' + $cat).show();
 	}
     });
+
+    jQuery(document).ready(function ($) {
+
+	$('.background-video').background({
+	    lazy: true
+	});
+
+    });
+
 }(jQuery);

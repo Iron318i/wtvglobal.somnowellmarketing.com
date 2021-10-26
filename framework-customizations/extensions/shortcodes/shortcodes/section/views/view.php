@@ -93,8 +93,19 @@ $type = ( isset($atts['type']) && $atts['type'] ) ? '' . $atts['type'] . '' : 's
 
 $id = strtolower(( isset($atts['section_title']) && $atts['section_title'] ) ? $atts['section_title'] : '');
 $id = str_replace(' ', '-', $id);
+
+$bg_video_data_attr = '';
+$section_extra_classes = '';
+if (!empty($atts['video'])) {
+    $filetype = wp_check_filetype($atts['video']);
+    $filetypes = array('mp4' => 'mp4', 'ogv' => 'ogg', 'webm' => 'webm', 'jpg' => 'poster');
+    $filetype = array_key_exists((string) $filetype['ext'], $filetypes) ? $filetypes[$filetype['ext']] : 'video';
+    $data_name_attr = version_compare(fw_ext('shortcodes')->manifest->get_version(), '1.3.9', '>=') ? 'data-background-options' : 'data-wallpaper-options';
+    $bg_video_data_attr = $data_name_attr . '="' . fw_htmlspecialchars(json_encode(array('source' => array($filetype => $atts['video'])))) . '"';
+    $custome_class .= ' background-video';
+}
 ?>
-<<?php echo $type ?><?php echo $id ? ' id="' . $id . '"' : ''; ?> class="content-section<?php echo $custome_class; ?>" <?php if ($section_style) echo'style="' . $section_style . '"'; ?>>
+<<?php echo $type ?><?php echo $id ? ' id="' . $id . '"' : ''; ?> class="content-section<?php echo $custome_class; ?>" <?php if ($section_style) echo'style="' . $section_style . '"'; ?> <?php echo $bg_video_data_attr; ?>>
 <div class="<?php echo esc_attr($container_class); ?>">
     <div class="row<?php echo $row_class ?>">
 	<?php echo do_shortcode($content); ?>

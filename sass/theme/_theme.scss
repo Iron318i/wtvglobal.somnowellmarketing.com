@@ -35,6 +35,24 @@ svg.icon{
     background-position: 50%;
     overflow: hidden;
 }
+.background-video{
+    background-color: #000;
+    position: relative;
+    &:before{
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+    }
+    .container{
+	position: relative;
+	z-index: 3;
+    }
+}
 .bg-gray{
     background-color: #f4f4f4;
 }
