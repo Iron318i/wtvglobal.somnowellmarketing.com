@@ -21,6 +21,12 @@
     }
     #page-header{
 	min-height: rem(580px);
+	.home &{
+	    min-height: rem(700px);
+	    .img-box{
+		margin-bottom: 3rem;
+	    }
+	}
     }
     #work-header,
     .single-header{
@@ -34,7 +40,7 @@
     .fw-heading-h2.lines{
 	&:before,
 	    &:after{
-	    margin-top: rem(30px);
+	    margin-top: rem(30px)!important;
 	}
 	.fw-special-title{
 	    padding-left: rem(40px);
