@@ -39,10 +39,10 @@
 	}
     }
     .row > .single-content{
-	width: calc(100% - 170px);
+	width: calc(100% - 200px);
     }
     .row > .aside{
-	width: 170px;
+	width: 200px;
     }
 }
 @include media-breakpoint-up(lg) {

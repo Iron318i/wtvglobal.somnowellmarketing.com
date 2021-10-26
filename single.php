@@ -31,6 +31,10 @@ if (fw_get_db_post_option(get_the_ID(), 'header_image')) {
 	    <?php if (is_active_sidebar('single-post')) : ?>
 		<?php dynamic_sidebar('single-post'); ?>
 	    <?php endif; ?>
+	    <ul class="cat-widget">
+		<li><a href="<?php echo get_post_type_archive_link('post'); ?>">All</a></li>
+		<?php wp_list_categories('orderby=name&hide_empty=1&title_li='); ?>
+	    </ul>
 	</div>
     </div>
 </div>
