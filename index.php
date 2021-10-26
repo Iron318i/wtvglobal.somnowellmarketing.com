@@ -14,26 +14,34 @@
 defined('ABSPATH') || exit;
 
 get_header();
+$page_for_posts = get_option('page_for_posts');
 ?>
-<div class="page-header" style="background-image: url(<?php echo wp_get_attachment_image_url(37, 'full'); ?>);">
-    <div class="container">
-	<h2 class="fw-special-title text-uppercase"><?php
-	    if (is_404()) {
-		echo '404';
-	    } elseif (is_search()) {
-		echo 'Search';
-	    } else {
-		echo 'BLOG';
-	    }
-	    ?></h2>
+<section id="page-header" class="content-section" style="background-image:url(<?php echo get_the_post_thumbnail_url($page_for_posts, 'full'); ?>);">
+    <div class="container text-center">
+	<div class="fw-heading fw-heading-h1 text-center">
+	    <h1 class="fw-special-title text-white fw-normal mb-0">blog.</h1>
+	</div>
     </div>
-</div>
-<div class="container py-3" id="content" tabindex="-1">
+</section>
+<div class="container w-1440 py-3" id="content" tabindex="-1">
+    <ul class="blog-cats nav">
+	<li><a href="#all" class="active">All</a></li>
+	<?php
+	$terms = get_terms([
+	    'taxonomy' => 'category'
+	]);
+	if ($terms && !is_wp_error($terms)) {
+	    foreach ($terms as $term) {
+		echo '<li><a href="#tax-' . $term->term_id . '">' . $term->name . '</a></li>';
+	    }
+	}
+	?>
+    </ul>
     <?php
     if (have_posts()) {
 	// Start the Loop.
 	?>
-        <div class="row">
+        <div class="row cards-row">
 	    <?php
 	    while (have_posts()) {
 		the_post();
@@ -43,7 +51,7 @@ get_header();
 		 * If you want to override this in a child theme, then include a file
 		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 		 */
-		get_template_part('loop-templates/content', get_post_format());
+		get_template_part('loop-templates/content');
 	    }
 	    ?>
         </div><!-- .row -->

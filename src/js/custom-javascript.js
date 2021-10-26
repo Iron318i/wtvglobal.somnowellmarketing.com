@@ -51,4 +51,18 @@
 
 	lastScrollTop = st;
     }
+
+
+    $('.blog-cats a').on('click', function (e) {
+	e.preventDefault();
+	$cat = this.hash.substr(1);
+	$('.blog-cats a').removeClass('active');
+	$(this).addClass('active');
+	if ($cat == 'all') {
+	    $('.cards-row .col').show();
+	} else {
+	    $('.cards-row .col').hide();
+	    $('.cards-row .' + $cat).show();
+	}
+    });
 }(jQuery);

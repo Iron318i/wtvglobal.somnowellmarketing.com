@@ -239,6 +239,10 @@ svg.icon{
 	    transform: translateX(-50%);
 	}
     }
+    .tax{
+	color: $cyan;
+	font-weight: 500;
+    }
 }
 .single-header{
     background-size: cover;
@@ -279,5 +283,22 @@ svg.icon{
 	margin: 0;
 	opacity: .2;
 	text-shadow: 0 0 10px rgba(#000, .85);
+    }
+}
+.blog-cats{
+    justify-content: center;
+    margin-bottom: 2rem;
+    li+li{
+	margin-left: 1rem;
+    }
+    a{
+	color: #202e37;
+	font-size: 16px;
+	padding: 2px 10px;
+	display: inline-block;
+    }
+    .active{
+	background-color: #ebebeb;
+	border-radius: rem(30px);
     }
 }
