@@ -383,11 +383,12 @@ svg.icon{
 }
 .our-products{
     justify-content: center;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.1);
     > .col{
 	display: flex;
 	align-items: stretch;
 	flex: 0 0 auto;
-	width: 100%;
+	width: 50%;
     }
 }
 .product{
