@@ -214,6 +214,20 @@ svg.icon{
     h1{
 	text-shadow: rem(0 0 10px) rgba(#000, .85);
     }
+    .fw-special-subtitle{
+	@include font-size(rem(40px));
+	text-shadow: rem(0 0 10px) rgba(#000, .85);
+	position: relative;
+	&:after {
+	    content: "";
+	    display: block;
+	    width: rem(35px);
+	    height: rem(5px);
+	    background-color: #35c0cd;
+	    margin: 0 auto;
+	    margin-top: 14px;
+	}
+    }
 }
 .cards-row{
     justify-content: center;

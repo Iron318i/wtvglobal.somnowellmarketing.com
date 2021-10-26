@@ -34,9 +34,9 @@ $heading_class = ($atts['alignment']) ? ' ' . $atts['alignment'] : '';
 $heading_class .= ($atts['lines']) ? ' lines' : '';
 ?>
 <div class="fw-heading fw-heading-<?php echo esc_attr($atts['heading']); ?><?php echo $heading_class; ?>" <?= $style ?>>
+    <?php $heading = "<{$atts['heading']} class='fw-special-title{$class}'>{$atts['title']}</{$atts['heading']}>"; ?>
+    <?php echo $heading; ?>
     <?php if (!empty($atts['subtitle'])): ?>
         <div class="fw-special-subtitle"><?php echo $atts['subtitle']; ?></div>
     <?php endif; ?>
-    <?php $heading = "<{$atts['heading']} class='fw-special-title{$class}'>{$atts['title']}</{$atts['heading']}>"; ?>
-    <?php echo $heading; ?>
 </div>
