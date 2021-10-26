@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="entry-content">
 	<?php
-	echo wpautop($post->post_content);
+	echo do_shortcode(wpautop($post->post_content));
 	?>
 	<?php
 	wp_link_pages(

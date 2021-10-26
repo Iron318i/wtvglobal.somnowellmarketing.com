@@ -261,8 +261,14 @@ svg.icon{
     a:not(.btn){
 	text-decoration: underline;
     }
+    .ratio{
+	margin-bottom: 2rem;
+    }
 }
 #work-header{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     min-height: 300px;
     padding: 5rem 0 2rem;
     display: flex;
@@ -276,7 +282,7 @@ svg.icon{
 	right: 0;
 	bottom: 0;
 	top: 0;
-	background-color: rgba(#000, .3);
+	background-color: rgba(#000, .2);
     }
     h1{
 	font-size: vw(122px);

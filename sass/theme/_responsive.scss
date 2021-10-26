@@ -70,6 +70,11 @@
     .cards-row> .col{
 	width: 25%;
     }
+    .single-content{
+	.ratio{
+	    max-width: 80%;
+	}
+    }
 }
 @include media-breakpoint-up(xl) {
     html{

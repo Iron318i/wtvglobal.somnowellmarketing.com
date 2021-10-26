@@ -7,10 +7,10 @@ $options = array(
     'page-header' => array(
 	'type' => 'box',
 	'options' => array(
-	    'banner_enable' => array(
-		'type' => 'switch',
-		'value' => false,
-		'label' => __('Enable Header', 'wtvglobal'),
+	    'header_image' => array(
+		'type' => 'upload',
+		'label' => __('Header Image ', 'fw'),
+		'desc' => __('1920x400px', 'fw')
 	    ),
 	),
 	'title' => __('Page Header', 'wtvglobal'),

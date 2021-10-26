@@ -30,7 +30,7 @@ $bgurl = wp_get_attachment_image_url(2862, 'full');
 </div>
 <section class="bottom-shadow">
     <div class="container pb-3 w-1440">
-	<div class="fw-heading fw-heading-h3 text-center lines mb-3"><h3 class="fw-special-title fw-normal">Other job posts</h3></div>
+	<div class="fw-heading fw-heading-h3 text-center lines mb-2"><h3 class="fw-special-title fw-normal">Other job posts</h3></div>
 	<div class="row cards-row">
 	    <?php
 	    $args = array(
