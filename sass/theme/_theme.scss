@@ -381,3 +381,30 @@ svg.icon{
 	text-align: center;
     }
 }
+.our-products{
+    justify-content: center;
+    > .col{
+	display: flex;
+	align-items: stretch;
+	flex: 0 0 auto;
+	width: 100%;
+    }
+}
+.product{
+    a{
+	display: block;
+	position: relative;
+    }
+    &:hover{
+	a:before{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    display: block;
+	    box-shadow: rem(0 0 30px) inset rgba(#000, .75);
+	}
+    }
+}

@@ -39,6 +39,31 @@ $options = array(
 		    ),
 		)
 	    ),
+	    'products-box' => array(
+		'title' => __('Products', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'products' => array(
+			'type' => 'addable-popup',
+			'label' => __('Our products', '{domain}'),
+			'size' => 'large',
+			'popup-options' => array(
+			    'image' => array(
+				'type' => 'upload',
+				'label' => __('Image 480x286px or bigger', 'fw'),
+				'desc' => __('Either upload a new, or choose an existing image from your media library', 'fw')
+			    ),
+			    'link' => array(
+				'type' => 'text',
+				'label' => __('Link', 'fw'),
+			    ),
+			),
+			'limit' => 0, // limit the number of boxes that can be added
+			'add-button-text' => __('Add', '{domain}'),
+			'sortable' => true,
+		    ),
+		)
+	    ),
 	)
     )
 );
