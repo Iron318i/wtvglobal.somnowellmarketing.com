@@ -798,3 +798,62 @@ svg.icon{
     background-color: #fafafa;
     padding: 1rem;
 }
+.we-deliver{
+    .col{
+	max-width: rem(391px);
+    }
+    .card{
+	box-shadow: 2px 4px 10px rgba(#000, .21);
+	max-width: 100%;
+	.card-img-top{
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    position: relative;
+	    height: rem(220px);
+	    transition: background .5s ease;
+	    background-color: #f4f4f4;
+	    img{
+		transition: opacity .5s ease;
+	    }
+	    .hover{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	    }
+	}
+	.card-title{
+	    font-weight: 400;
+	}
+	.card-text{
+	    margin-bottom: 1rem;
+	}
+	&:hover{
+	    transform: none;
+	    .card-img-top{
+		background-color: #35c0cd;
+	    }
+	    .normal{
+		opacity: 0;
+	    }
+	    .hover{
+		opacity: 1;
+	    }
+	}
+	&.last{
+	    .card-img-top{
+		background-color: #202e37;
+	    }
+	    .card-title{
+		text-align: center;
+	    }
+	    &:hover{
+		.card-img-top{
+		    background-color: #35c0cd;
+		}
+	    }
+	}
+    }
+}

@@ -35,6 +35,11 @@
     .single-header{
 	min-height: rem(400px);
     }
+    .we-deliver{
+	.col{
+	    width: 50%!important;
+	}
+    }
 }
 @include media-breakpoint-up(md) {
     html{
