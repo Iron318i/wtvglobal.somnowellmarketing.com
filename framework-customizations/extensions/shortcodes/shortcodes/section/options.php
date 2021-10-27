@@ -60,6 +60,7 @@ $options = array(
 	    '' => 'None',
 	    'bg-gray' => 'Gray',
 	    'bg-black' => 'Black',
+	    'bg-dark' => 'Dark',
 	)
     ),
     'gutters' => array(

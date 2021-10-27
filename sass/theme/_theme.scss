@@ -427,6 +427,10 @@ svg.icon{
 }
 .service-box{
     text-align: center;
+    transition: transform .3s ease;
+    &:hover{
+	transform: scale(1.05);
+    }
     .top{
 	border-radius: rem(50px 50px 0 0);
 	box-shadow: 0 0 10px rgba(#000,.2);
