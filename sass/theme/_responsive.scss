@@ -170,4 +170,35 @@
 	    display: none;
 	}
     }
+    .roullete-section{
+	.inner {
+	    padding-top: 0 !important;
+	}
+	.roulette-text {
+	    margin: 20px 0;
+	    padding: 0 3%;
+	}
+	.roulette-text > .inner {
+	    height: 40px;
+	    width: 90%;
+	}
+	.roulette-text > .inner > div{
+	    height: 40px;
+	}
+	.roulette-text .inner p {
+	    font-size: rem(22px);
+	    line-height: 40px;
+	}
+	.roulette-text.left > .inner {
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+	.roulette-text.right{
+	    border: 0 none;
+	    > .inner {
+		margin-right: auto;
+		margin-left: auto;
+	    }
+	}
+    }
 }

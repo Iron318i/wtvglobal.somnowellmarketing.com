@@ -623,3 +623,134 @@ svg.icon{
 	}
     }
 }
+#our-clients-create{
+    .fw-special-title{
+	color: #fff;
+    }
+    .fw-heading.lines:before,
+	.fw-heading.lines:after{
+	background-color: #fff;
+    }
+}
+
+.roullete-section.active .roulette-text .roullete-item-right,
+.roullete-section.active .roulette-text .roullete-item-left {
+    visibility: visible;
+}
+.roullete-section .roulette-text {
+    margin: 50px 0 80px;
+}
+.roullete-section .roulette-text.left > .inner {
+    margin-right: 5%;
+}
+.roullete-section .roulette-text.right {
+    border-left: 1px solid #ffffff;
+}
+.roullete-section .roulette-text.right > .inner {
+    margin-left: 5%;
+}
+.roullete-section .roulette-text .roullete-item-right,
+.roullete-section .roulette-text .roullete-item-left {
+    position: absolute;
+    top: 0%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transform: translateY(-120px);
+    height: 60px;
+    line-height: 60px;
+    visibility: hidden;
+}
+.roullete-section .roulette-text .roullete-item-right p,
+.roullete-section .roulette-text .roullete-item-left p{
+    margin: 0;
+    font-size: rem(28px);
+    font-weight: 600;
+    line-height: 60px;
+}
+.roullete-section .roulette-text > .inner {
+    width: 70%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.4);
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+.roulette-text .roullete-item-left {
+    animation: roullete 1000ms linear;
+    animation-iteration-count: infinite;
+}
+
+.roulette-text .roullete-item-right {
+    animation: roullete 1000ms linear;
+    animation-iteration-count: infinite;
+}
+
+.roulette-text .roullete-item-left p,
+.roulette-text .roullete-item-right p {
+    color: #9b9b9b;
+}
+
+.roulette-text .roullete-item-left.stop,
+.roulette-text .roullete-item-right.stop {
+    animation: none;
+    opacity: 0;
+}
+
+.roulette-text .roullete-item-left.bingo.selected,
+.roulette-text .roullete-item-right.bingo.selected {
+    transform: translateY(0);
+    animation: roulleteBingo 500ms ease forwards;
+    animation-iteration-count: 1;
+    animation-fill-mode: forward;
+}
+.roulette-text .roullete-item-left.bingo.selected p,
+.roulette-text .roullete-item-right.bingo.selected p {
+    color: #000;
+}
+
+@-webkit-keyframes roulleteBingo {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes roulleteBingo {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes roullete {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes roullete {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(200px);
+    }
+}

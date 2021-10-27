@@ -66,13 +66,6 @@
 	}
     });
 
-    jQuery(document).ready(function ($) {
-
-	$('.background-video').background({
-	    lazy: true
-	});
-
-    });
 
     $('.testimonials').owlCarousel({
 	dots: true,
@@ -109,4 +102,70 @@
 	}
     });
 
+    function roullete() {
+	if ($(".roullete-section").length == 0)
+	    return;
+	let position = $(".roullete-section").offset().top - $(".roullete-section").outerHeight() + 100;
+	let scroll = $(window).scrollTop();
+
+	if (scroll > position && $(".roullete-section").hasClass("active") == false) {
+	    //if ( scroll > position) {
+	    $(".roullete-section").addClass("active");
+	    let bingoLeft = Math.floor(Math.random() * ($(".roullete-item-left").length - 0) + 0);
+	    let bingoRight = Math.floor(Math.random() * ($(".roullete-item-right").length - 0) + 0); //  let roullete_delay_right_step = 100;
+	    //   let roullete_delay_left_step = 100;
+
+	    let roullete_delay_right_step = 0;
+	    let roullete_delay_left_step = 0;
+	    $(".roullete-item-right").removeClass("move");
+	    $(".roullete-item-left").removeClass("move");
+
+	    if ($(".roullete-item-left.bingo").length == 0) {
+		$(".roullete-item-left").eq(bingoLeft).addClass("bingo");
+	    }
+
+	    if ($(".roullete-item-right.bingo").length == 0) {
+		$(".roullete-item-right").eq(bingoRight).addClass("bingo");
+	    }
+
+	    let roullete_delay_right = roullete_delay_right_step;
+	    $(".roullete-item-right").each(function () {
+		$(this).css("animation-delay", roullete_delay_right + "ms");
+		roullete_delay_right += 1000 / $(".roullete-item-right").length;
+	    });
+	    var roullete_delay_left = roullete_delay_left_step;
+	    $(".roullete-item-left").each(function () {
+		$(this).css("animation-delay", roullete_delay_left + "ms");
+		roullete_delay_left += 1000 / $(".roullete-item-left").length;
+	    });
+	    setTimeout(() => {
+		$(".roullete-item-right").each(function () {
+		    $(this).addClass("stop");
+
+		    if ($(this).hasClass('bingo')) {
+			$(this).addClass("selected");
+		    }
+		});
+		$(".roullete-item-left").each(function () {
+		    $(this).addClass("stop");
+
+		    if ($(this).hasClass('bingo')) {
+			$(this).addClass("selected");
+		    }
+		});
+	    }, 3500);
+	}
+    }
+
+
+    jQuery(document).ready(function ($) {
+	$('.background-video').background({
+	    lazy: true
+	});
+	roullete();
+
+	$(window).scroll(function () {
+	    roullete();
+	});
+    });
 }(jQuery);
