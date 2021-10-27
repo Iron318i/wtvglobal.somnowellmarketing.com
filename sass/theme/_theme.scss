@@ -58,6 +58,9 @@ svg.icon{
 .bg-gray{
     background-color: #f4f4f4;
 }
+.bg-dark{
+    background-color: $gray-800!important;
+}
 .bottom-shadow{
     box-shadow: 0 8px 8px rgba(#000, .25);
 }
@@ -471,7 +474,7 @@ svg.icon{
     }
 }
 #schedule-a-conversation{
-    .col-lg-3{
+    .col-lg-4{
 	max-width: 366px
     }
 }
@@ -508,5 +511,31 @@ svg.icon{
 	color: #fff;
 	font-size: rem(35px);
 	font-weight: 400;
+    }
+}
+#home-quote{
+    .fw-special-title{
+	color: #35c0cd;
+	font-weight: 300;
+	@include font-size(rem(55px));
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	&:before ,
+	    &:after {
+	    font-size: vw(200px);
+	    line-height: 1;
+	    font-weight: 700;
+	}
+	&:before {
+	    content: "“";
+	    margin-right: 1rem;
+	}
+	&:after {
+	    content: "”";
+	    transform: translateY(45%);
+	    margin-left: 1rem;
+	}
     }
 }
