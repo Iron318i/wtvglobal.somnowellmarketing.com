@@ -64,6 +64,42 @@ $options = array(
 		    ),
 		)
 	    ),
+	    'testimonials-box' => array(
+		'title' => __('Testimonials', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'testimonials' => array(
+			'type' => 'addable-popup',
+			'label' => __('Our clients say', '{domain}'),
+			'size' => 'large',
+			'popup-options' => array(
+			    'quote_text' => array(
+				'type' => 'wp-editor',
+				'label' => __('Quote', 'fw'),
+			    ),
+			    'heading' => array(
+				'type' => 'text',
+				'label' => __('Name', 'fw'),
+			    ),
+			),
+			'limit' => 0, // limit the number of boxes that can be added
+			'add-button-text' => __('Add', '{domain}'),
+			'sortable' => true,
+			'template' => '{{- heading }}', // box title
+		    ),
+		)
+	    ),
+	    'logos-box' => array(
+		'title' => __('Logos', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'logos' => array(
+			'type' => 'multi-upload',
+			'label' => __('Logos', '{domain}'),
+			'images_only' => true,
+		    ),
+		)
+	    ),
 	)
     )
 );

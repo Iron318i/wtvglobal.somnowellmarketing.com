@@ -572,3 +572,54 @@ svg.icon{
 	}
     }
 }
+.testimonials{
+    max-width: rem(1140px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonial{
+    text-align: center;
+    .quote{
+	color: #454646;
+	font-size: rem(24);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	&:before ,
+	    &:after {
+	    font-size: vw(200px);
+	    line-height: .8;
+	    font-weight: 700;
+	}
+	&:before {
+	    content: "“";
+	    margin-right: 1rem;
+	}
+	&:after {
+	    content: "”";
+	    transform: translateY(25%);
+	    margin-left: 1rem;
+	}
+    }
+    .author{
+	color: #333;
+	font-size: rem(16px);
+    }
+}
+#logos{
+    padding: 1.5rem 0;
+}
+.logos{
+    .owl-stage{
+	display: flex;
+	align-items: center;
+    }
+    .owl-item{
+	display: flex;
+	img{
+	    margin: auto;
+	    width: auto;
+	}
+    }
+}
