@@ -109,6 +109,11 @@
 	    margin-top: -3rem;
 	}
     }
+    #home-headings{
+	.fw-special-title{
+	    font-size: vw(70px);
+	}
+    }
 }
 @include media-breakpoint-up(xl) {
     html{
@@ -155,6 +160,14 @@
 	    padding-left: rem(20px);
 	    padding-right: rem(20px);
 	    max-width: 80%;
+	}
+    }
+    #home-headings{
+	.col-12{
+	    margin-top: 2rem;
+	}
+	.fw-special-title br{
+	    display: none;
 	}
     }
 }

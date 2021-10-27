@@ -5,10 +5,18 @@ if (!defined('FW')) {
 ?>
 <div class="row cards-row">
     <?php
-    $args = array(
-	'posts_per_page' => -1,
-	'post_type' => 'work',
-    );
+    if ($atts['post_in']) {
+	$args = array(
+	    'posts_per_page' => $atts['posts_per_page'],
+	    'post_type' => 'work',
+	    'post__in' => $atts['post_in']
+	);
+    } else {
+	$args = array(
+	    'posts_per_page' => $atts['posts_per_page'],
+	    'post_type' => 'work',
+	);
+    }
 
     $query = new WP_Query($args);
 

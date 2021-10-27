@@ -539,3 +539,36 @@ svg.icon{
 	}
     }
 }
+#logo-with-lines{
+    .img-box{
+	position: relative;
+	&:before{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    top: 50%;
+	    height: 1px;
+	    background-color: $gray-800;
+	    z-index: 1;
+	}
+	img{
+	    position: relative;
+	    z-index: 2;
+	}
+    }
+}
+#home-headings{
+    .fw-special-title{
+	line-height: 1;
+	&:after {
+	    content: "";
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: rem(20px);
+	    width: 30px;
+	    height: 4px;
+	    background-color: #f4f4f4;
+	}
+    }
+}
