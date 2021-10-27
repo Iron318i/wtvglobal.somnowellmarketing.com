@@ -100,6 +100,31 @@ $options = array(
 		    ),
 		)
 	    ),
+	    'metrics-box' => array(
+		'title' => __('Data & metrics', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'metrics' => array(
+			'type' => 'addable-popup',
+			'label' => __('Metrics', '{domain}'),
+			'size' => 'large',
+			'popup-options' => array(
+			    'image' => array(
+				'type' => 'upload',
+				'label' => __('Image', 'fw'),
+			    ),
+			    'heading' => array(
+				'type' => 'text',
+				'label' => __('Name', 'fw'),
+			    ),
+			),
+			'limit' => 0, // limit the number of boxes that can be added
+			'add-button-text' => __('Add', '{domain}'),
+			'sortable' => true,
+			'template' => '{{- heading }}', // box title
+		    ),
+		)
+	    ),
 	)
     )
 );
