@@ -244,6 +244,14 @@ svg.icon{
 	    margin-right: auto;
 	}
     }
+    .btn-outline-primary{
+	color: #fff;
+	border-color: #fff;
+	&:hover{
+	    background-color: #fff;
+	    color: #000;
+	}
+    }
 }
 .cards-row{
     justify-content: center;
@@ -753,4 +761,40 @@ svg.icon{
     to {
         transform: translateY(200px);
     }
+}
+/*our-approach*/
+#our-approach{
+    .styled{
+	list-style: none;
+	padding-left: 0;
+	li{
+	    display: inline-block;
+	    @include font-size(rem(30px));
+	    font-weight: 600;
+	    text-transform: uppercase;
+	}
+	li + li{
+	    &:before{
+		content: "";
+		display: inline-block;
+		margin: rem(0 20px);
+		width: 4px;
+		height: rem(20px);
+		background-color: $cyan;
+	    }
+	}
+    }
+}
+.img-box.rounded{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: rem(120px);
+    height: rem(120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%!important;
+    background-color: #fafafa;
+    padding: 1rem;
 }

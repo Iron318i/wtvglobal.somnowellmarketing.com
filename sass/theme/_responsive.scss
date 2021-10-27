@@ -21,7 +21,10 @@
     }
     #page-header{
 	min-height: rem(580px);
-	.home &{
+	&.background-video{
+	    min-height: rem(660px);
+	}
+	.home &.background-video{
 	    min-height: rem(700px);
 	    .img-box{
 		margin-bottom: 3rem;
