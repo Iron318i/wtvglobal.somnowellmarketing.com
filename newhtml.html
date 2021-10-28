@@ -1,12 +1,80 @@
-<div class="roullete-item-left">Virtual</div>
-<div class="roullete-item-left">Hybrid</div>
-<div class="roullete-item-left">Global</div>
-<div class="roullete-item-left">Award-winning</div>
-<div class="roullete-item-left">Stand-out</div>
-<div class="roullete-item-left">Safely delivered</div>
-<div class="roullete-item-left">Measurable</div>
-<div class="roullete-item-left">Creative</div>
-<div class="roullete-item-left">Live</div>
-<div class="roullete-item-left">Remotely managed</div>
-<div class="roullete-item-left">Significant</div>
-<div class="roullete-item-left">Innovative</div>
+<div class="mx-auto" style="max-width: 615px">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" id="salesForm">
+	<input type=hidden name='captcha_settings' value='{"keyname":"wtvglobal","fallback":"true","orgId":"00Db0000000JLjs","ts":""}'>
+	<input type=hidden name="orgid" value="00Db0000000JLjs">
+	<input type=hidden name="retURL" value="https://wtvglobal.com/thankyou">
+	<div class="mb-1">
+	    <label for="name" class="form-label">* Contact name</label>
+	    <input class="form-control"  id="name" maxlength="80" name="name" size="20" type="text" required>
+	</div>
+	<div class="mb-1">
+	    <label for="email" class="form-label">* Email</label>
+	    <input class="form-control" id="email" maxlength="80" name="email" size="20" type="email" required>
+	</div>
+	<div class="mb-1">
+	    <label for="phone" class="form-label">Phone number</label>
+	    <input class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text">
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrQPF" class="form-label">Project ID</label>
+	    <input class="form-control"  id="00N0X00000CrQPF" maxlength="20" name="00N0X00000CrQPF" size="20" type="text" placeholder="This information will enable us to investigate faster">
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrMht" class="form-label">Platform</label>
+	    <select class="form-select" id="00N0X00000CrMht" name="00N0X00000CrMht" title="Platform">
+		<option value="CrewStudio">CREWSTUDIO</option>
+	    </select>
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrNQF" class="form-label">Request type</label>
+	    <select class="form-select" id="00N0X00000CrNQF" name="00N0X00000CrNQF" title="Request Type">
+		<option value="Technical Support">Technical support</option>
+	    </select>
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrOEy" class="form-label">* Request reason</label>
+	    <select class="form-select" id="00N0X00000CrOEy" name="00N0X00000CrOEy" title="Request Reason">
+		<option value="">--None--</option>
+		<option value="Feature Usability Issue">Feature usability issue</option>
+		<option value="Video Upload Issue">Video upload issue</option>
+		<option value="Video Task Upload Issue">Video task upload issue</option>
+		<option value="Video Recording Issue">Video recording issue</option>
+		<option value="Upload Queue Issue">Upload queue issue</option>
+		<option value="Platform Access Issue">Platform access issue</option>
+		<option value="Other">Other</option>
+	    </select>
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrS1Y" class="form-label">Device brand</label>
+	    <select class="form-select" id="00N0X00000CrS1Y" name="00N0X00000CrS1Y" title="Device Brand">
+		<option value="">--None--</option>
+		<option value="Apple">Apple</option>
+		<option value="Asus">Asus</option>
+		<option value="Google">Google</option>
+		<option value="Huawei">Huawei</option>
+		<option value="LG">LG</option>
+		<option value="Nokia">Nokia</option>
+		<option value="Oppo">Oppo</option>
+		<option value="Samsung">Samsung</option>
+		<option value="Sony">Sony</option>
+		<option value="Xiaomi">Xiaomi</option>
+		<option value="ZTE">ZTE</option>
+		<option value="Other">Other</option>
+	    </select>
+	</div>
+	<div class="mb-1">
+	    <label for="00N0X00000CrRPF" class="form-label">Device model</label>
+	    <input class="form-control" id="00N0X00000CrRPF" maxlength="50" name="00N0X00000CrRPF" size="20" type="text" >
+	</div>
+	<div class="mb-1">
+	    <label for="descr" class="form-label">* Description</label>
+	    <textarea class="form-control" id="descr" name="description"></textarea>
+	</div>
+	<div class="g-recaptcha" data-sitekey="6LfaBcwZAAAAAGmKK2F1yYxu8wiBXZ9MY4FWMQ93"></div><br>
+	<p style="font-size:10px;"><strong style="color:red; font-size:14px;">*</strong> These fields are required</p>
+	<div class="text-center">
+	    <input class="btn btn-primary" type="submit" name="submit" id="submitButton">
+	</div>
+	<textarea  id="00N0X00000CrQLN" name="00N0X00000CrQLN" rows="3" type="text" wrap="soft" hidden style="display:none;position:absolute; height:10px">Default</textarea><br>
+    </form>
+</div>
