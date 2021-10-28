@@ -860,6 +860,19 @@ our-partners,
 	    }
 	}
     }
+    &.lp{
+	.card{
+	    .card-title{
+		font-weight: 600;
+	    }
+	    &:hover{
+		img {
+		    filter: brightness(2.5);
+		    opacity: 1!important;
+		}
+	    }
+	}
+    }
 }
 .metrics{
     justify-content: center;
