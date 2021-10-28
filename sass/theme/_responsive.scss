@@ -16,8 +16,11 @@
     .cards-row> .col{
 	width: 50%;
     }
-    .our-partners> .col{
-	width: 50%;
+    .platforms-row,
+    .our-partners, {
+	> .col{
+	    width: 50%;
+	}
     }
     #page-header{
 	min-height: rem(580px);
@@ -122,6 +125,12 @@
 	    font-size: vw(70px);
 	}
     }
+    h2.text-cyan.fw-light{
+	font-size: vw(70px);
+    }
+    .big-text{
+	font-size: rem(30px);
+    }
 }
 @include media-breakpoint-up(xl) {
     html{
@@ -150,6 +159,13 @@
     }
     .w-1440{
 	max-width: 1470px;
+    }
+}
+@include media-breakpoint-down(lg) {
+    .big-text{
+	br{
+	    display: none;
+	}
     }
 }
 @include media-breakpoint-down(md) {

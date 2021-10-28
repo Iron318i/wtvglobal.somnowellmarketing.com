@@ -25,11 +25,17 @@ svg.icon{
 .text-dark{
     color: $gray-800;
 }
+.text-cyan{
+    color: $cyan;
+}
 .fw-semibold{
     font-weight: 600;
 }
 .fsz-25{
     font-size: rem(25px);
+}
+.col-lg-4 .btn{
+    min-width: rem(320px);
 }
 /*Section*/
 .content-section{
@@ -253,6 +259,8 @@ svg.icon{
 	}
     }
 }
+our-partners,
+.platforms-row,
 .cards-row{
     justify-content: center;
     > .col{
@@ -370,16 +378,6 @@ svg.icon{
     padding-left: 0;
     a{
 	font-size: rem(18px);
-    }
-}
-.our-partners{
-    justify-content: center;
-    > .col{
-	display: flex;
-	align-items: stretch;
-	margin-bottom: 1.5rem;
-	flex: 0 0 auto;
-	width: 100%;
     }
 }
 .partner{
@@ -500,7 +498,7 @@ svg.icon{
 	width: 35px;
 	height: 5px;
 	background-color: #35c0cd;
-	margin: 0 auto 2rem;
+	margin: 0 auto 1rem;
 	opacity: 1;
     }
     p{
@@ -786,6 +784,9 @@ svg.icon{
 		background-color: $cyan;
 	    }
 	}
+	.text > span{
+	    font-weight: 400;
+	}
     }
 }
 .img-box.rounded{
@@ -884,5 +885,31 @@ svg.icon{
 	    background-color: #fafafa;
 	    border-radius: 50%;
 	}
+    }
+}
+.platforms-row{
+    .col{
+	max-width: rem(391px);
+    }
+    .card{
+	box-shadow: 2px 4px 10px rgba(#000, .21);
+	max-width: 100%;
+    }
+    .card-title{
+	font-weight: 400;
+    }
+}
+.big-text{
+    font-size: rem(24px);
+    max-width: rem(600px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding-left: rem(40px);
+    border-left: 2px solid $cyan;
+    line-height: 1.2;
+    text-align: left;
+    p:last-child{
+	margin-bottom: 0;
     }
 }

@@ -34,6 +34,7 @@ $options = array(
 	    '' => '---',
 	    'text-dark' => 'Dark',
 	    'text-white' => 'White',
+	    'text-cyan' => 'Cyan',
 	)
     ),
     'heading_weight' => array(
@@ -43,6 +44,7 @@ $options = array(
 	    '' => 'Bold',
 	    'fw-semibold' => 'Semibold',
 	    'fw-normal' => 'Normal',
+	    'fw-light' => 'Light',
 	)
     ),
     'margin_bottom' => array(
