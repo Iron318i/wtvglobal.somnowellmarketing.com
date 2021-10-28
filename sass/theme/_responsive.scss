@@ -87,6 +87,11 @@
 	    font-size: vw(125px);
 	}
     }
+    #page-header.lp{
+	h1{
+	    font-size: vw(80px);
+	}
+    }
     .cards-row> .col{
 	width: 25%;
     }
@@ -130,6 +135,13 @@
     }
     .big-text{
 	font-size: rem(30px);
+    }
+    .text-block {
+	ul{
+	    li{
+		padding-left: rem(35px);
+	    }
+	}
     }
 }
 @include media-breakpoint-up(xl) {
