@@ -157,15 +157,49 @@
 	}
     }
 
+    function wtvCalendar() {
+	if ($(".wtv-calendar").length == 0)
+	    return;
+	var interval = 0;
+	$(".wtv-calendar").children().each(function (index) {
+	    if ($(this).hasClass('show'))
+		return;
+	    let element = $(this);
+	    let offset = element.offset().top;
+	    let scroll = $(window).scrollTop();
+	    let height = $(window).height() - 100;
+	    index += 1;
+	    let margin = -40;
+
+	    if (index % 2) {
+		margin = 40;
+	    }
+
+	    if (scroll > offset - height + margin) {
+		if (index % 2) {
+		    interval += 400;
+		} else {
+		    interval += 600;
+		}
+
+		setTimeout(() => {
+		    element.addClass("show");
+		}, interval);
+	    }
+	});
+    } // Roullete animation
+
 
     jQuery(document).ready(function ($) {
 	$('.background-video').background({
 	    lazy: true
 	});
 	roullete();
+	wtvCalendar();
 
 	$(window).scroll(function () {
 	    roullete();
+	    wtvCalendar();
 	});
     });
 }(jQuery);
