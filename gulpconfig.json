@@ -18,7 +18,7 @@
 	"node": "./node_modules",
 	"composer": "./vendor",
 	"dev": "./src",
-	"dist": "./dist/wtvglobal",
-	"distprod": "./dist-product/wtvglobal"
+	"dist": "./dist/smw-wtvglobal",
+	"distprod": "./dist-product/smw-wtvglobal"
     }
 }

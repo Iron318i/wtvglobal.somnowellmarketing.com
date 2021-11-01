@@ -47,7 +47,6 @@ defined('ABSPATH') || exit;
 
 	<script>
 	    (function () {
-
 		window.ldfdr = window.ldfdr || {};
 		(function (d, s, ss, fs) {
 		    fs = d.getElementsByTagName(s)[0];
@@ -59,7 +58,6 @@ defined('ABSPATH') || exit;
 			    fs.parentNode.insertBefore(cs, fs)
 			}, 1);
 		    }
-
 		    ce(ss);
 		})(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_JMvZ8gk96Md82pOd.js');
 	    })();
@@ -70,7 +68,7 @@ defined('ABSPATH') || exit;
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGVCKMK"
 			  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-			<?php do_action('wp_body_open'); ?>
+	<?php do_action('wp_body_open'); ?>
 	<header class="site-header">
 	    <nav class="navbar navbar-expand-lg navbar-dark">
 		<div class="container w-1440">

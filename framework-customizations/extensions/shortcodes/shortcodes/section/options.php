@@ -100,6 +100,11 @@ $options = array(
 	'choices' => array(//	in future may will set predefined images
 	)
     ),
+    'background_video' => array(
+	'label' => __('Background Video', 'wtvglobal'),
+	'type' => 'upload',
+	'files_ext' => array('mp4'),
+    ),
     'video' => array(
 	'label' => __('Background Video', 'fw'),
 	'desc' => __('Insert Video URL to embed this video', 'fw'),
