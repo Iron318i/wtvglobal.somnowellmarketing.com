@@ -364,3 +364,13 @@ function state_shortcode() {
 }
 
 add_shortcode('state', 'state_shortcode');
+
+
+add_action("wp_ajax_my_ajax_action", "k_ajax_my_ajax_action");
+add_action("wp_ajax_nopriv_my_ajax_action", "k_ajax_my_ajax_action");
+
+function k_ajax_my_ajax_action() {
+    echo'<div class="row start-conversation"><div class="col-md-6">' . fw_get_db_settings_option('salesforce') . '</div>';
+    echo'<div class="col-md-6">' . fw_get_db_settings_option('calendly') . '</div></div>';
+    wp_die();
+}

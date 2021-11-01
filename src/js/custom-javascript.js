@@ -191,16 +191,55 @@
     } // Roullete animation
 
 
+    var contact_show = false;
+
+    function scrollContact() {
+	if (contact_show) {
+	    return false;
+	}
+
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('#contact-form').offset().top;
+	var eh = $('#contact-form').outerHeight();
+	var dh = $(document).height();
+
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+	    contact_show = true;
+	    console.log('contact_show');
+	    $.ajax({
+		url: '/wp-admin/admin-ajax.php',
+		type: "POST",
+		data: {
+		    action: 'my_ajax_action'
+		},
+
+		success: function (data) {
+		    $('#start-conversation').html(data);
+
+		}
+	    });
+	}
+    }
+
+
     jQuery(document).ready(function ($) {
-	$('.background-video').background({
-	    lazy: true
-	});
 	roullete();
 	wtvCalendar();
+	scrollContact();
+
+	$("#bgVideo source").each(function () {
+	    var sourceFile = $(this).attr("data-src");
+	    $(this).attr("src", sourceFile);
+	    var video = this.parentElement;
+	    video.load();
+	    video.play();
+	});
 
 	$(window).scroll(function () {
 	    roullete();
 	    wtvCalendar();
+	    scrollContact();
 	});
     });
 }(jQuery);

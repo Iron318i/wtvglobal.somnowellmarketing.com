@@ -6,7 +6,7 @@
  */
 // Exit if accessed directly.
 ?>
-<section class="content-section py-2 py-md-3 bottom-shadow">
+<section id="contact-form" class="content-section py-2 py-md-3 bottom-shadow">
     <div class="container w-1440">
 	<div class="fw-heading fw-heading-h2 text-center lines">
 	    <h2 class="fw-special-title text-dark fw-semibold mb-2 mb-md-3">Start a conversation</h2></div><div class="fw-heading fw-heading-h4 text-center">

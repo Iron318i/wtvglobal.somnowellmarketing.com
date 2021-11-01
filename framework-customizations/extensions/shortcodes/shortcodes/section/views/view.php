@@ -101,7 +101,7 @@ if ($atts['background_video']) {
 <<?php echo $type ?><?php echo $id ? ' id="' . $id . '"' : ''; ?> class="content-section<?php echo $custome_class; ?>" <?php if ($section_style) echo'style="' . $section_style . '"'; ?>>
 <?php if ($atts['background_video']) { ?>
     <video autoplay muted loop id="bgVideo">
-        <source src="<?php echo $atts['background_video']['url'] ?>" type="video/mp4">
+        <source data-src="<?php echo $atts['background_video']['url'] ?>" type="video/mp4">
     </video>
 <?php } ?>
 <div class="<?php echo esc_attr($container_class); ?>">
