@@ -15,9 +15,7 @@
 	    <div class="col-md-6">
 		<?php echo fw_get_db_settings_option('salesforce'); ?>
 	    </div>
-	    <div class="col-md-6">
-		<?php echo fw_get_db_settings_option('calendly'); ?>
-	    </div>
+	    <div id="calendly" class="col-md-6"></div>
 	</div>
     </div>
 </section>

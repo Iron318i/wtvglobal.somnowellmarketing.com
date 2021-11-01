@@ -215,8 +215,7 @@
 		},
 
 		success: function (data) {
-		    $('#contact-form').html(data);
-
+		    $('#calendly').html(data);
 		}
 	    });
 	}
