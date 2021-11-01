@@ -78,6 +78,7 @@
 
     var owl = $('.logos.owl-carousel');
     owl.owlCarousel({
+	lazyLoad: true,
 	margin: 0,
 	nav: false,
 	dots: false,
