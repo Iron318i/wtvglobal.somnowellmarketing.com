@@ -61,6 +61,24 @@ $options = array(
 		    ),
 		)
 	    ),
+	    'gtm-box' => array(
+		'title' => __('Google Tag Manager', 'wtvglobal'),
+		'type' => 'box',
+		'options' => array(
+		    'is_gtm' => array(
+			'label' => __('Enable', 'wtvglobal'),
+			'type' => 'switch',
+		    ),
+		    'gtm_head' => array(
+			'type' => 'textarea',
+			'label' => __('Head Code', 'fw'),
+		    ),
+		    'gtm_body' => array(
+			'type' => 'textarea',
+			'label' => __('Body Code', 'fw'),
+		    ),
+		)
+	    ),
 	)
     )
 );
