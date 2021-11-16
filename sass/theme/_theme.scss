@@ -612,6 +612,13 @@ svg.icon{
 	color: #333;
 	font-size: rem(16px);
     }
+    .logo{
+	text-align: center;
+	img{
+	    max-width: rem(100px);
+	    display: inline-block;
+	}
+    }
 }
 #logos{
     padding: 1.5rem 0;

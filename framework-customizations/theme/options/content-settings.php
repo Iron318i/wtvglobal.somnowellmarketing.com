@@ -81,6 +81,11 @@ $options = array(
 				'type' => 'text',
 				'label' => __('Name', 'fw'),
 			    ),
+			    'logo' => array(
+				'type' => 'upload',
+				'label' => __('Image Logo 110px', 'fw'),
+				'desc' => __('Either upload a new, or choose an existing image from your media library', 'fw')
+			    ),
 			),
 			'limit' => 0, // limit the number of boxes that can be added
 			'add-button-text' => __('Add', '{domain}'),

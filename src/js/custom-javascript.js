@@ -194,9 +194,12 @@
     var contact_show = false;
 
     function scrollContact() {
+	if ($("#contact-form").length == 0)
+	    return;
 	if (contact_show) {
 	    return false;
 	}
+
 
 	var wt = $(window).scrollTop();
 	var wh = $(window).height();
