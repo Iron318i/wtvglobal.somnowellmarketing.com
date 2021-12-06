@@ -12,7 +12,7 @@ if (!defined('FW')) {
     	<div class="quote"><?php echo $value['quote_text'] ?></div>
 	    <?php if (!empty($value['logo'])) { ?>
 		<div class="logo">
-		    <?php echo wp_get_attachment_image($value['logo']["attachment_id"], array(110, 110), false, array("class" => 'img-fluid')); ?>
+		    <?php echo wp_get_attachment_image($value['logo']["attachment_id"], array(165, 165), false, array("class" => 'img-fluid')); ?>
 		</div>
 	    <?php } ?>
         </div>
