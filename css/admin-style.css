@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 18.10.2017, 12:07:10
+    Author     : Iron_318i
+*/
+
+.fw-option-type-addable-box.has-boxes.width-type-fixed {
+    width: 100% !important; /* same as .fw-backend-option-fixed-width */
+}
+
+.fw-backend-option-type-addable-box .fw-pull-left {
+    float: none !important;
+}
+.page-builder-hide-button{
+    display: none !important;
+}
+
+.fw-backend-option-design-default > .fw-backend-option-input.width-type-fixed > .fw-inner, .fw-backend-option-design-customizer > .fw-backend-option-input.width-type-fixed > .fw-inner, .fw-backend-option-fixed-width{
+    max-width: none !important;
+}
+.js-option-type-icon-container .js-option-type-icon-item:before {
+    font-size: 40px;
+}
+.fw-col-sm-1-5{
+    width: 20%;
+}
