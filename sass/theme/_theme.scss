@@ -343,7 +343,13 @@ svg.icon {
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: #000;
+    background-color: rgba(#000, .2);
+  }
+  &.single {
+    min-height: 150px;
+    &:before {
+      background-color: #000;
+    }
   }
   h1 {
     font-size: vw(122px);

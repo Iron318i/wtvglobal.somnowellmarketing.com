@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
 
 get_header();
 ?>
-    <div id="work-header"></div>
+    <div id="work-header" class="single"></div>
     <div class="container py-3 w-1440" id="content" tabindex="-1">
         <div class="row">
             <div class="col-12 single-content">
