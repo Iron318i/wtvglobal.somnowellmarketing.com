@@ -43,6 +43,9 @@
       width: 50% !important;
     }
   }
+  ul.three-cols {
+    columns: 2;
+  }
 }
 @include media-breakpoint-up(md) {
   html {
@@ -144,6 +147,9 @@
       }
     }
   }
+  ul.three-cols {
+    columns: 3;
+  }
 }
 @include media-breakpoint-up(xl) {
   html {
@@ -151,6 +157,9 @@
   }
   .container {
     max-width: rem(1630px);
+  }
+  .w-1280 {
+    max-width: rem(1330px);
   }
   .w-1440 {
     max-width: rem(1470px);
